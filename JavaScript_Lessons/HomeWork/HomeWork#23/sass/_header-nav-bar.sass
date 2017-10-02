@@ -1,0 +1,66 @@
+.nav-bar
+  height: 56px
+
+.logo
+  padding-top: 11px
+  display: inline-block
+  float: left
+  +lg
+    padding-left: 20px
+
+.block-nav__btn-nav
+  display: none
+  +tablet
+    display: block
+    float: right
+    margin: 20px 40px 0 0
+    position: relative
+    padding-left: 15px
+
+.fa-bars
+  font-size: 20px
+
+.block-nav:hover .nav-list
+  display: inline-block
+  +tablet
+    position: absolute
+    top: 49px
+    right: 57px
+    z-index: 2
+
+.nav-list
+  list-style: none
+  display: block
+  overflow: hidden
+  margin: 0
+  padding-top: 19px
+  float: right
+  padding-right: 33px
+  +lg
+    padding-right: 20px
+  +tablet
+    padding-left: 0
+    float: none
+    text-align: right
+    display: none
+    background-color: rgba(255, 255, 255, 0.8)
+    margin-left: 0
+
+.block-nav__nav-item
+  float: left
+  display: block
+  overflow: hidden
+  margin-left: 25px
+  +tablet
+    float: none
+    margin-bottom: 6px
+
+.nav-link
+  text-decoration: none
+  text-transform: uppercase
+  font-weight: normal
+  color: $color-title
+  font-size: 13px
+
+.nav-link:hover
+  color: #ea5a4b

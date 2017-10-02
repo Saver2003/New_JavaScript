@@ -1,0 +1,170 @@
+.form__container
+  text-align: center
+
+.image-bg
+  margin-top: 58px
+  display: inline-block
+  width: 99px
+  height: 99px
+  border-radius: 50%
+  background: #fff
+  position: relative
+  text-align: center
+
+.mail
+  margin-bottom: 21px
+
+.form__title
+  display: block
+  color: $text-color
+  font-family: $ff-main
+  font-weight: normal
+  text-transform: uppercase
+  font-size: 29px
+  margin-bottom: 9px
+
+
+.form__descr
+  display: block
+  color: $text-color
+  font-family: $ff-main
+  font-weight: normal
+  text-transform: uppercase
+  font-size: 21px
+
+.form__descr::before
+  content: ""
+  height: 1px
+  width: 80px
+  background: #387d89
+  position: absolute
+  top: 50%
+  left: 155px
+  +large
+    display: none
+
+.form__descr::after
+  content: ""
+  height: 1px
+  width: 72px
+  background: #387d89
+  position: absolute
+  top: 50%
+  right: 164px
+  +large
+    display: none
+
+.form-line
+  margin-bottom: 34px
+
+.form-fields
+  width: 570px
+  text-align: center
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 0 auto
+  +sm
+    width: 80%
+    justify-content: space-around
+
+
+
+
+.name
+  display: block
+  background: $main-color
+  border: 1px solid $border-color
+  height: 46px
+  width: 270px
+  padding-left: 15px
+  font-family: $ff-add
+  color: $text-color
+  margin-bottom: 30px
+  +sm
+    width: 100%
+
+.email
+  display: inline-block
+  background: $main-color
+  border: 1px solid $border-color
+  height: 46px
+  width: 270px
+  padding-left: 15px
+  font-family: $ff-add
+  color: $text-color
+  margin-bottom: 30px
+  +sm
+    width: 100%
+
+.textarea
+  display: inline-block
+  width: 570px
+  height: 126px
+  background: $main-color
+  border: 1px solid $border-color
+  padding-left: 15px
+  font-family: $ff-add
+  color: $text-color
+  margin-bottom: 30px
+  padding-top: 5px
+  +sm
+    width: 100%
+
+.button
+  display: block
+  width: 144px
+  height: 56px
+  margin: 0 auto
+  position: relative
+  margin-bottom: 120px
+
+.form-button
+  margin-bottom: 71px
+
+.btn-form
+  display: inline-block
+  background: $main-color
+  font-size: 15px
+  font-family: $ff-main
+  text-transform: uppercase
+  color: $text-color
+  font-weight: normal
+  border: none
+  padding: 9px 29px
+  border-top: 1px solid $border-color
+  border-left: 1px solid $border-color
+  border-right: 1px solid $border-color
+  text-decoration: none
+
+.btn-form::before
+  content: ""
+  background: #387d89
+  width: 41px
+  height: 1px
+  display: block
+  position: absolute
+  bottom: 18px
+  left: 21px
+
+.btn-form::after
+  content: ""
+  background: $border-color
+  width: 39px
+  height: 1px
+  display: block
+  position: absolute
+  bottom: 18px
+  right: 22px
+
+.triangle-form
+  width: 16px
+  height: 16px
+  background: $main-color
+  border-left: 1px solid #387d89
+  border-bottom: 1px solid #387d89
+  display: block
+  transform: rotate(-45deg)
+  position: absolute
+  left: 64px
+  top: 29px

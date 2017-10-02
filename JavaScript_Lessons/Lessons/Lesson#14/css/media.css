@@ -1,0 +1,124 @@
+@media screen and (min-width: 480px) {
+
+    /*.block {
+        padding-bottom: 100px;
+    }*/
+}
+
+@media screen and (min-width: 640px) {
+.logo {
+    width: 98px;
+    height: 95px;
+    background-size: 32px;
+}
+    .main-nav ul {
+        position: static;
+        background: transparent;
+        width: 100%;
+        padding: 31px 0 0 124px ;
+        display: block;
+    }
+    .main-nav li {
+        display: inline-block;
+        margin-right: 42px;
+    }
+    .main-nav li:last-child {
+        margin-right: 0;
+    }
+    .main-nav li a{
+        color: #f26c4f;
+        font-size: 14px;
+        display: inline-block;
+        border: none;
+    }
+    .nav-btn {
+        display: none;
+    }
+    .block-1 .title-1 {
+        display: none;
+    }
+    .block-1 .title-2 {
+        display: block;
+    }
+    .block-1 .part-1 {
+        padding: 0 63px 24px 20px;
+    }
+    .block-1 .part-2 {
+        padding: 0 63px 24px 20px;
+    }
+    .block-1 .part-3 {
+        display: block;
+        padding: 0 63px 24px 20px;
+    }
+    .block-2 .title-1 {
+        display: none;
+    }
+    .block-2 .title-2 {
+        display: block;
+        padding: 122px 60px 35px;
+        line-height: 35px;
+    }
+    .block-2 p {
+        padding: 0 60px 30px;
+    }
+    .block-2 p span {
+        display: block;
+    }
+    .block-1 {
+        float: left;
+        width: 56%;
+    }
+    .block-1 .title-2 {
+        padding: 119px 0 23px;
+        font-size: 43px;
+        line-height: 50px;
+        padding-left: 20px;
+    }
+
+    .block-2 {
+        float: right;
+        width: 44%;
+        
+    }
+    .block-3 .container .btn {
+        /*position: absolute;
+        top: 215px;
+        left: 26px;*/
+        padding: 17px 50px 17px 51px;
+        margin-left: 28px;
+    }
+    .block-3 h3 {
+        padding: 35px 0 24px 26px;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    header {
+        background: url(../img/big-photo.jpg);
+        height: 543px;
+
+    }
+}
+
+@media screen and (min-width: 1174px) {
+    .block-1 .part-1 {
+        padding: 0 63px 24px 0;
+    }
+    .block-1 .part-2 {
+        padding: 0 63px 24px 0;
+    }
+    .block-1 p:last-child {
+        display: block;
+        padding: 0 63px 120px 0;
+    }
+    .block-3 h3 {
+        padding: 96px 0 24px 0;
+    }
+    .block-3 p {
+        padding: 0 582px 35px 0;
+
+    }
+    .block-3 .container .btn {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,14 @@
+@media screen and (max-width: 920px) {
+    .item {
+        width: 48%;
+        margin-bottom: 4%;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}

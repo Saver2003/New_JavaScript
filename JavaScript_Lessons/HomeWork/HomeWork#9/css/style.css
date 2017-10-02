@@ -1,0 +1,275 @@
+body {
+    min-width: 990px;
+    font-family: 'Raleway', 'Montserrat', 'Roboto Slab', Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    background: #fbfaf8;
+    margin: 0;
+}
+
+.container {
+    width: 990px;
+    margin: 0 auto;
+}
+
+
+.first-list {
+    background: url(../img/hand.png) 4px 100% no-repeat;
+    display: inline-block;
+}
+
+.first-list .descr {
+    width: 69%;
+    float: right;
+    margin-top: 52px;
+    padding: 0;
+}
+
+.first-list .descr h3 {
+    font-size: 30px;
+
+    margin-bottom: 0;
+    padding-bottom: 24px;
+    color: #555555;
+}
+
+.first-list .descr p {
+    margin: 0;
+    font-size: 16px;
+    color: #8c8c8c;
+    padding-bottom: 23px;
+    line-height: 27px;
+
+}
+.first-list .list {
+    width: 68%;
+    float: right;
+    padding-bottom: 82px;
+}
+
+.first-list .list li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 14px;
+    color: #8c8c8c;
+}
+
+.first-list .list li::before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    background: url(../img/arrow-circle.png) 0 0 no-repeat;
+}
+
+.second-list {
+    width: 306px;
+    margin-top: 50px;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    position: relative;
+    padding: 0px 26px 0 26px;
+}
+
+.second-list h3::before {
+    content: "";
+    width: 23px;
+    height: 24px;
+    background: url(../img/icon-human.png) 0 0 no-repeat;
+    position: absolute;
+    top: 18px;
+    left: 27px;
+}
+
+.second-list h3 {
+    padding-left: 33px;
+    padding-top: 4px;
+    line-height: 19px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto Slab';
+    margin-bottom: 17px;
+    border-bottom: 2px solid #dfdfdf;
+    padding-right: 10px;
+    padding-bottom: 17px;
+}
+
+.second-list dt {
+    font-family: Tahoma;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    padding-top: 3px;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.second-list dt  a {
+    color: #1f1f1f;
+}
+
+.second-list dt::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background: url(../img/check-mark.png) 0 0 no-repeat;
+    position: absolute;
+    top: 7px;
+    left: 1px;
+}
+
+.second-list dd {
+    font-family: Tahoma;
+    color: #7d7d7d;
+    font-size: 12px;
+    margin: 0;
+    padding-left: 20px;
+    width: 100%;
+    line-height: 20px;
+    padding-bottom: 11px;
+}
+
+.third-list {
+    padding: 20px;
+    width: 310px;
+}
+.third-list h3 {
+    font-size: 26px;
+    font-weight: normal;
+    color: #414a5a;
+    padding-bottom: 11px;
+    margin-bottom: 0;
+}
+
+.third-list ul {
+    padding: 0;
+    margin: 0;
+
+}
+.third-list li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 24px;
+    padding-bottom: 10px;
+    line-height: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.third-list li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #414a5a;
+    display: block;
+}
+
+.third-list li::before {
+    content: "";
+    width: 6px;
+    height: 9px;
+    background: url(../img/arrow-sprite.png) 0 0 no-repeat;
+    position: absolute;
+    top: 14px;
+    left: 1px;
+}
+
+.third-list li:hover {
+    width: 270px;
+    height: 36px;
+    background: #414a5a;
+    border-radius: 3px;
+    margin-left: 1px;
+    padding-left: 38px;
+}
+
+.third-list li:hover a {
+    color: #fff;
+}
+
+.third-list li:hover::before {
+    background: url(../img/arrow-sprite.png) 0 -10px no-repeat;
+
+    top: 14px;
+    left: 14px;
+}
+
+.fourth-list {
+    background: #d58c2c;
+    width: 400px;
+    height: 100%;
+    position: relative;
+}
+
+.fourth-list .head-black {
+    padding-top: 20px;
+    padding-left: 95px;
+    position: relative;
+    z-index: 1000;
+}
+
+.head-list {
+    position: relative;
+}
+
+.head-list .head {
+    width: 202px;
+    height: 28px;
+    background: #424242;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.head-list .red-line {
+    width: 2px;
+    height: 2px;
+    background: red;
+    background-repeat: repeat-y;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.head-list .fon {
+    padding: 20px;
+}
+
+.fourth-list h3 {
+    font-family: "open sans";
+    font-size: 13px;
+    color: #fff;
+    font-weight: normal;
+    z-index: 1100;
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    left: 82px;
+
+}
+
+.head-list .list {
+    position: absolute;
+    top: 48px;
+    left: 20px;
+    font-size: 11px;
+
+}
+
+.head-list .list li {
+    border-top: 1px solid #acd1f6;
+    line-height: 20px;
+    width: 200px;
+}
+
+.fourth-list .curved-line {
+    position: absolute;
+    top: 48px;
+    left: 20px;
+}

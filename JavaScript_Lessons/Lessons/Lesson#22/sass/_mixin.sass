@@ -1,0 +1,14 @@
+=triangle-bot($color, $h,$w)
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: $h $w/2 0 $w
+  border-color: $color transparent transparent transparent
+
+=tablet
+  @media screen and (max-width: 820px)
+    @content
+
+=phone
+  @media screen and (max-width: 640px)
+    @content

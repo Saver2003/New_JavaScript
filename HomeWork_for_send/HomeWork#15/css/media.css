@@ -1,0 +1,139 @@
+@media screen and (max-width: 1183px) {
+    .block-2 {
+        text-align: center;
+    }
+    .block-2 h3 {
+        display: inline-block;
+        margin: 0 auto;
+        float: none;
+        border-right: none;
+        border-bottom: 2px solid #ffcc01;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .block-2 p {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        padding-left: 0;
+        width: 80%;
+    }
+    .block-2 p::before {
+        content: "";
+    }
+    .item {
+        width: 43%;
+        margin: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .container ul {
+        padding: 10px 3% 10px 0;
+        position: relative;
+    }
+    .container .nav ul li {
+        padding: 5% 3% 3% 3%;
+    }
+    header img {
+        padding-left: 20px;
+    }
+    header img {
+        float: none;
+        padding-bottom: 15px;
+    }
+    .nav {
+        position: absolute;
+        top: 20px;
+        right: 5%;
+    }
+    .nav-btn {
+        display: inline-block;
+        padding: 0;
+        width: 70px;
+        height: 70px;
+        background: #d3ab08;
+        border: none;
+    }
+    .nav-btn i {
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        margin: -1px 0 0 -9px;
+    }
+    .nav-btn i::before, .nav-btn i::after {
+        content: "";
+        width: 40px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+    }
+    .nav-btn i::before {
+        top: -6px;
+    }
+    .nav-btn i::after {
+        top: 6px;
+    }
+    .container ul {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: rgba(211, 171, 8, 0.8);
+    }
+    .nav:hover ul {
+        display: block;
+    }
+    .container .nav ul li {
+        display: block;
+        width: 150px;
+        padding: 15px;
+    }
+    .container .utterance {
+        font-size: 35px;
+        padding: 125px 20px 0;
+    }
+    .item {
+        width: 100%;
+        padding: 15px 15px 35px 15px;
+        margin: 20px 30px;
+    }
+    .item a::after {
+        position: absolute;
+        bottom: 10%;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    footer span {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .soc {
+        padding: 1%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container .utterance {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .block-2 h3 {
+        font-size: 30px;
+    }
+    .block-2 p {
+        font-size: 16px;
+        width: 80%;
+    }
+}

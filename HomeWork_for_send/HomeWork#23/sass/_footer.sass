@@ -1,0 +1,65 @@
+.footer
+  background:
+    image: url(../img/bg-footer.jpg)
+    repeat: repeat
+  height: 386px
+  border-top: 8px solid #ea5a4b
+  +lg
+    height: 155%
+
+.footer-block__footer-items
+  display: flex
+  justify-content: space-between
+  flex-direction: row
+  +lg
+    flex-wrap: wrap
+    justify-content: center
+
+.footer-wrap
+  display: inline-block
+  width: 32%
+  +lg
+    width: 52%
+    +tablet
+      width: 100%
+
+.footer-item
+  width: 298px!important
+  margin-top: 67px
+  +lg
+    margin-left: 20px
+
+.footer-title
+  color: #fff
+  font-size: 14px
+  text-transform: uppercase
+
+.text
+  font-family: $add-font
+  color: #adadad
+  font-weight: bold
+  font-size: 14px
+
+.text--change
+  padding: 17px 0 18px 0
+
+.footer-list-item
+  border-bottom: 1px solid #3b3b3b
+  padding: 15px 0
+
+.footer-list-item:last-child
+  border-bottom: none
+
+.social-icons
+  margin-top: 22px
+
+%icon
+  width: 30px
+  height: 30px
+  display: inline-block
+  margin: 0 4px 4px 0
+
+@each $icon in rss, facebook, twitter, email, tumblr, path, vimeo, zerply, picasa, stumble_upon, skype, reddit, evernote, behance, dribble, digg, blogger, flickr, linkedin, google_plus
+    .ic-#{$icon}
+      background-image: url(../img/#{$icon}.png)
+      @extend %icon

@@ -1,0 +1,105 @@
+@media screen and (max-width: 1200px) {
+    .container h1 {
+        padding: 16px 0 24px 10px;
+    }
+    .block-5 {
+        text-align: center;
+    }
+    .block-5 .pic {
+        float: none;
+        display: inline-block;
+        padding: 50px 0 0;
+        margin: 0;
+        width: 40%;
+    }
+    .block-5 .pic:nth-child(3) {
+        padding: 25px 0 0;
+    }
+    .block-5 .pic:nth-child(4) {
+        padding: 25px 0 0;
+    }
+    .block-5 .pic:nth-child(3n) {
+        clear: left;
+    }
+    .block-5 .button {
+        position: absolute;
+        top: 475px;
+        left: 50%;
+        margin-left: -76px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .container .item {
+        width: 50%;
+        float: left;
+        padding-bottom: 20px;
+        padding-left: 5%;
+    }
+    .item:nth-child(3n) {
+        clear: left;
+    }
+    .item p:nth-child(even) {
+        padding: 0 10% 10%;
+    }
+    .item-1 h5 i {
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        margin-left: -20px;
+    }
+    .item-2 h5 i {
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        margin-left: -20px;
+    }
+    .item-3 h5 i {
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        margin-left: -20px;
+    }
+    .item-4 h5 i {
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        margin-left: -20px;
+    }
+    .block-5 {
+        text-align: center;
+    }
+    .block-5 .pic {
+        float: none;
+        display: inline-block;
+        width: 100%;
+    }
+    .block-5 .pic {
+        padding: 25px 0 0;
+    }
+    .block-5 .pic:first-child {
+        padding: 50px 0 0;
+        margin: 0;
+    }
+    .block-5 .button {
+        position: absolute;
+        top: 865px;
+        left: 50%;
+        margin-left: -76px;
+    }
+}
+
+@media screen and (max-width: 726px) {
+    .block-4 b {
+        position: absolute;
+        top: 205px;
+        left: 50%;
+        margin: -45px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer p {
+        padding: 37px 20px 48px;
+    }
+}

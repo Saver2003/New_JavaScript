@@ -1,0 +1,155 @@
+.personal
+  margin-bottom: 24px
+
+.personal__container
+  text-align: center
+
+.personal__title
+  display: block
+  color: $text-color
+  font-family: $ff-main
+  font-weight: normal
+  text-transform: uppercase
+  font-size: 29px
+  margin-bottom: 9px
+
+.line
+  width: 70%
+  margin-bottom: 64px
+  position: relative
+  display: inline-block
+
+.container__descr
+  display: block
+  color: $text-color
+  font-family: $ff-main
+  font-weight: normal
+  text-transform: uppercase
+  font-size: 21px
+
+.container__descr::before
+  content: " "
+  height: 1px
+  width: 30%
+  background: #387d89
+  position: absolute
+  top: 50%
+  left: -65px
+  +large
+    display: none
+
+.container__descr::after
+  content: " "
+  height: 1px
+  width: 30%
+  background: #387d89
+  position: absolute
+  top: 50%
+  right: -65px
+  +large
+    display: none
+
+.item
+  display: flex
+  justify-content: space-around
+  flex-direction: row
+  flex-wrap: wrap
+  width: 100%
+  +large
+    justify-content: space-around
+
+.personal__item
+  background: $main-color
+  width: 370px
+  +large
+    flex-direction: column
+    margin-bottom: 25px
+
+.personal__item-1
+  border-top: 7px solid #e84c3d
+
+.personal__item-2
+  border-top: 7px solid #fdbd1f
+
+.personal__item-3
+  border-top: 7px solid #1bbc9b
+
+.perconal-photo
+  margin-top: 50px
+  border-radius: 50%
+  margin-bottom: 18px
+
+.personal__text
+  font-size: 16px
+  font-family: $ff-add
+  color: #76b2be
+  width: 85%
+  display: inline-block
+  margin-bottom: 40px
+  line-height:  26px
+
+.personal__button
+  margin-bottom: 69px
+  position: relative
+  width: 102px
+  display: inline-block
+
+.pers__button-1
+  text-decoration: none
+  text-transform: uppercase
+  font-family: $ff-main
+  color: $text-color
+  font-size: 15px
+  background: #e84c3d
+  padding: 8px 21px
+
+.pers__button-1::before
+  content: ""
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 11px 10px 0 10px
+  border-color: #e84c3d transparent transparent transparent
+  position: absolute
+  top: 27px
+  left: 45px
+
+.pers__button-2
+  text-decoration: none
+  text-transform: uppercase
+  font-family: $ff-main
+  color: $text-color
+  font-size: 15px
+  background: #fdbd1f
+  padding: 8px 21px
+
+.pers__button-2::before
+  content: ""
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 11px 10px 0 10px
+  border-color: #fdbd1f transparent transparent transparent
+  position: absolute
+  top: 27px
+  left: 45px
+
+.pers__button-3
+  text-decoration: none
+  text-transform: uppercase
+  font-family: $ff-main
+  color: $text-color
+  font-size: 15px
+  background: #1bbc9b
+  padding: 8px 21px
+
+.pers__button-3::before
+  content: ""
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 11px 10px 0 10px
+  border-color: #1bbc9b transparent transparent transparent
+  position: absolute
+  top: 27px
+  left: 45px

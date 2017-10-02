@@ -1,0 +1,243 @@
+.body {
+    font-family: 'Istok Web', sans-serif;
+    color: #4b3f55;
+}
+
+.bg-violet {
+    background: #775ba3;
+}
+
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #f8e1b4;
+}
+
+.navbar-brand {
+    margin-right: 5rem;
+    margin-bottom: 0.7rem;
+}
+
+.user-link, .user-link:hover {
+    color: #fff;
+}
+
+.navbar-icon {
+    color: #fff;
+    line-height: 1.2;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #fff;
+    outline: none;
+}
+
+.carousel-inner img {
+    height: 524px;
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+ol {
+    margin-bottom: 0;
+}
+
+.carousel-indicators .active {
+    background: #fff;
+}
+
+.carousel-indicators li {
+    background: transparent;
+}
+
+.title {
+    margin-top: 6.5rem;
+    font-size: 2.6rem;
+    text-align: center;
+    color: #775ba3;
+    font-weight: 600;
+}
+
+.text {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+    color: #4b3f55;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+}
+
+.block-1 {
+    background: #fcfcfc;
+    border-top: 1px solid #91c5a9;
+    border-bottom: 1px solid #91c5a9;
+}
+
+.title-2 {
+    padding-top: 4.5rem;
+    font-size: 2.6rem;
+    text-align: center;
+    color: #775ba3;
+    font-weight: 600;
+}
+
+.block-1 img {
+    display: inline-block;
+    text-align: center;
+}
+
+.card-item {
+    background: transparent;
+    border: none;
+}
+
+.card-item .card-text {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: #4b3f55;
+}
+
+.cards-icons {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.title-3 {
+    padding-top: 3rem;
+    font-size: 2.1rem;
+    text-align: center;
+    color: #775ba3;
+    font-weight: 500;
+}
+
+.block-2 h3 {
+    margin-top: 3rem;
+}
+
+.block-2 img {
+    width: 100%;
+    border-radius: 0;
+}
+
+.block-2 .border-line {
+    border-top: 3px solid #91c5a9;
+    border-bottom: 3px solid #91c5a9;
+    width: 100%;
+}
+
+.cards-photo {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.pad-0 {
+    padding: 0;
+}
+
+.col-sm-12, col-md-12 {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+}
+
+.card {
+    border: none;
+    max-width: 358px;
+    display: block;
+}
+
+.card h4 {
+    color: #91c5a9;
+    font-size: 1rem;
+}
+
+.card h6 {
+    color: #91c5a9;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: #4b3f55;
+    font-size: 0.7rem;
+}
+
+.card-new {
+    width: 358px;
+}
+
+.btn-group {
+    width: 100%;
+}
+
+.btn {
+    padding: 0.5rem 0;
+    border-radius: 0;
+    font-size: 1.7rem;
+    color: #fff;
+    border: none;
+    width: 50%;
+    outline: none;
+}
+
+.btn:focus {
+    z-index: 1;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn-1 {
+    background: #3b5998;
+}
+
+.btn-2 {
+    background: #d14333;
+}
+
+.btn-3 {
+    background: #3b5998;
+}
+
+.btn-4 {
+    background: #ea4c88;
+}
+
+.btn-5 {
+    background: #00aced;
+}
+
+.btn-6 {
+    background: #c70c0c;
+}
+
+.footer {
+    margin-top: 6rem;
+    background: #54865d!important;
+    padding: 2rem !important;
+}
+
+.footer span {
+    font-size: 0.8rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8rem;
+}

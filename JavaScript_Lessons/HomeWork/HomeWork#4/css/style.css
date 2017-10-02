@@ -1,0 +1,193 @@
+/* Стили для header */
+
+.container {
+    width: 986px;
+    margin: 0 auto;
+}
+
+header img {
+    margin-top: 20px;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+nav ul li {
+    display: inline-block;
+    float: left;
+    padding: 10px 36px 10px 7px;
+    box-sizing: content-box;
+    margin-top: 15px;
+}
+
+ul {
+    padding: 0;
+}
+
+.last {
+    padding-right: 145px;
+}
+
+li {
+    background: #03a7d4;
+    border-right: 1px solid #fff;
+}
+
+
+/* Стили для левой колонки */
+
+.content aside {
+    margin-top: 50px;
+    width: 25%;
+    float: left;
+}
+
+.content aside h3 {
+    font-size: 23px;
+    font-weight: normal;
+    color: #008fbf;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.content aside p {
+    font-size: 14px;
+    margin: 10px 0 25px 0;
+}
+
+.content aside a {
+    color: #008fbf;
+}
+
+
+/* Стили для правой колонки */
+
+main {
+    margin-top: 50px;
+    width: 70%;
+    float: right;
+}
+
+.childroom {
+    font-size: 28px;
+    color: #008fbf;
+}
+
+main h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+main h4 a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+
+/* Стили для блока item-box-1 */
+
+.item-box-1 {
+    margin-left: 10px;
+}
+
+.item-box-1 .text {
+    width: 68%;
+    float: left;
+    margin-top: 0;
+}
+
+.item-box-1 p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.item-box-1 img {
+    width: 25%;
+    float: right;
+}
+
+
+/* Стили для блока item-box-2 */
+
+.item-box-2 {
+    margin-left: 10px;
+}
+
+.item-box-2 .text {
+    width: 68%;
+    float: left;
+    margin-top: 0;
+}
+
+.item-box-2 img {
+    width: 25%;
+    float: right;
+}
+
+
+/* Стили для блока item-box-3 */
+
+.livingroom {
+    clear: both;
+    font-size: 28px;
+    color: #008fbf;
+    margin-top: 16px;
+    padding-top: 40px;
+}
+
+.item-box-3 .text {
+    width: 70%;
+    float: right;
+    margin-top: 0;
+}
+
+.item-box-3 p {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.item-box-3 img {
+    width: 25%;
+    float: left;
+}
+
+
+/* Стили для блока item-box-4 */
+
+.item-box-4 .text {
+    width: 70%;
+    float: right;
+    margin-top: 0;
+}
+
+.item-box-4 p {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.item-box-4 img {
+    width: 25%;
+    float: left;
+}
+
+.content.container {
+    overflow: hidden;
+}
+
+
+/* Стили для footer*/
+
+footer {
+    border-top: 2px dashed grey;
+    font-size: 19px;
+    color: #595959;
+    font-weight: bold;
+}
+
+footer span {
+    color: #000;
+}

@@ -1,0 +1,40 @@
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+}
+
+.blocks {
+    width: 800px;
+    margin: 50px auto;
+    border: 1px solid red;
+    /*font-size: 0;*/
+    display: table;
+
+
+}
+
+.box {
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid green;
+    display: inline-block;
+    vertical-align: top;
+    background: pink;
+    font-size: 16px;
+    display: table-cell;
+}
+
+.box-img {
+    padding: 0;
+}
+
+.box.box-img img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.box.box-md {
+    background: #8fc0db;
+}

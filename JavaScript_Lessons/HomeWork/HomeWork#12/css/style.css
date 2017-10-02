@@ -1,0 +1,134 @@
+body {
+    min-width: 1170px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    background: #fff url(../img/main-pic.jpg) 50% 120px no-repeat;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+header .container {
+    background: #05aecc;
+    margin-top: 35px;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav > ul {
+    /*margin: 0 0 0 0;*/
+    padding: 0 0 0 86px;
+    width: 1170px;
+}
+
+.main-nav > ul > li {
+    float: left;
+    margin: 0;
+    position: relative;
+}
+
+.main-nav > ul > li > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    padding: 26px 38px 25px 25px;
+}
+
+.main-nav > ul > li:hover > a {
+    background: #fff;
+    color: #ef5966;
+}
+
+.main-nav > ul > li:hover {
+    background: #fff;
+    color: #ef5966;
+}
+
+.sub-nav > ul {
+background: rgba(255, 255, 255, 0.96);
+box-shadow: 0px -3px 19px 0px rgba(50, 50, 50, 0.55);
+}
+
+.main-nav > ul > li > .sub-nav {
+    padding-top: 10px;
+    position: absolute;
+    top: 66px;
+    left: 0px;
+    display: none;
+}
+
+.main-nav .sub-nav ul {
+    padding: 6px 17px 0 21px;
+}
+
+.main-nav .sub-nav img {
+    margin: 0;
+    float: left;
+    padding-right: 13px;
+    display: inline-block;
+    margin-right: 0;
+}
+
+.main-nav > ul > li:hover .sub-nav {
+    display: block;
+}
+
+.main-nav .sub-nav h4 {
+    white-space: nowrap;
+    display: block;
+    padding: 0px 50px 2px 60px;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.main-nav .sub-nav span {
+    display: block;
+    font-size: 14px;
+    padding: 0 0 7px 0;
+    line-height: 14px;
+    color: #454545;
+}
+
+.main-nav .button {
+    clear: both;
+    font-size: 12px;
+    color: #fff;
+    background: #05aecc;
+    text-decoration: none;
+    padding: 4px 26px 4px 26px;
+}
+
+.main-nav .button:hover {
+    cursor: pointer;
+}
+
+.main-nav .sub-nav ul li {
+    padding-bottom: 21px;
+    clear: both;
+    border-bottom: 1px solid #cacaca;
+}
+
+.main-nav .sub-nav ul li:nth-child(n + 1) {
+    padding-top: 19px;
+    padding-bottom: 21px;
+}
+
+.main-nav .link {
+    text-decoration: none;
+    color: #ef5966;
+    font-size: 16px;
+}
+
+.main-nav .sub-nav ul li:last-child {
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 11px;
+}

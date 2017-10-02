@@ -1,0 +1,100 @@
+.navbar-default {
+    margin: 0;
+    background-color: #11b46f;
+    border: none;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:focus {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+}
+
+.navbar-toggle {
+    border: none;
+}
+
+.navbar-default .navbar-toggle {
+    background: rgba(163, 163, 163, 0);
+}
+
+.navbar-default .navbar-toggle:hover {
+    background: rgba(163, 163, 163, 0);
+}
+
+.navbar-default .navbar-toggle:focus {
+    background: rgba(163, 163, 163, 0);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    width: 100%;
+    height: auto;
+}
+
+.container .page-header h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.container .pan h3 {
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.container .panel {
+    max-width: 400px;
+    margin: 15px auto;
+}
+
+.container .pics {
+    margin-bottom: 30px;
+}
+
+.container .pics img {
+    width: 100%;
+}
+
+.list-box ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.list-box ul li:hover a {
+    font-weight: 700;
+    color: #34759f;
+}
+
+.container .big-pic img {
+    width: 100%;
+    height: auto;
+}
+
+.container .page-header {
+    margin: 20px 0 20px;
+}
+
+.container .footer {
+    margin: 10px 0 25px;
+}

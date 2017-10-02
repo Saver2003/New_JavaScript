@@ -1,0 +1,90 @@
+body {
+    min-width: 320px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    background: #f7f7f7;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+}
+/*.box a::before {
+    content: "\f018";
+    font-family: FontAwesome;
+    padding-right: 15px;
+}*/
+.block-1 {
+    background: #d34346;
+    margin-top: 50px;
+
+}
+.block-1 h3 {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+    padding: 12px 32px 16px;
+}
+.block-2 .item h4 {
+    color: #bd2c30;
+    font-size: 20px;
+    font-weight: 600;
+}
+.block-2 .item p {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 0 0 60px;
+}
+.block-2 {
+    display: flex;
+    padding-top: 47px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.block-2 .item {
+    width: 21%;
+    margin: 0px 12px;
+}
+.block-2 .item-1 h4::before {
+    content: "\f018";
+    font-family: FontAwesome;
+    font-size: 30px;
+    padding-right: 27px;
+    color: #2c3e50;
+    vertical-align: middle;
+    line-height: 30px;
+}
+.block-2 .item-2 h4::before {
+    content: "\f06c";
+    font-family: FontAwesome;
+    font-size: 30px;
+    padding-right: 29px;
+    color: #2c3e50;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.block-2 .item-3 h4::before {
+    content: "\f015";
+    font-family: FontAwesome;
+    font-size: 30px;
+    padding-right: 32px;
+    color: #2c3e50;
+    vertical-align: middle;
+    line-height: 30px;
+}
+.block-2 .item-4 h4::before {
+    content: "\f0c0";
+    font-family: FontAwesome;
+    font-size: 30px;
+    padding-right: 27px;
+    color: #2c3e50;
+    vertical-align: middle;
+    line-height: 30px;
+}

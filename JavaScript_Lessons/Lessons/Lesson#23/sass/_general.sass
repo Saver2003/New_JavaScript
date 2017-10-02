@@ -1,0 +1,69 @@
+=placeholder()
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+body
+  min-width: 320px
+  font-family: arial ,sans-serif
+  font-size: 16px
+  line-height: 1.3
+  background: #fff
+
+.container
+  min-width: 320px
+  max-width: 900px
+  margin: 0 auto
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0 auto
+
+.sidebar
+  width: percentage(327/1170)
+  font:
+    size: 24px
+    weight: normal
+  background:
+    color: #ccc
+    image: url(../img/..)
+    position: 50% 0
+    size: cover
+    repeat: no-repeat
+
+.main
+  width: percentage((1170-327)/1170)
+
+%btn
+  padding: 20px 30px
+  display: inline-block
+
+.btn-bord
+  @extend %btn
+  border-bottom: 1px solid red
+
+.block
+  padding: 30px
+  .field
+    color: red
+    padding: 0 5px
+    +placeholder()
+      color: red
+      font-style: italic
+    &:focus
+      +placeholder()
+        color: transparent
+
+%icon
+  width: 16px
+  height: 16px
+  display: inline-block
+
+@each $icon in fb, ytb, tw, vk, gplus
+  .icon-#{$icon}
+    background-image: url(../img/#{$icon}.png)
+    @extend %icon

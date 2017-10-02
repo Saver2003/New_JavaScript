@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+    /*.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+    }*/
+}
+/*@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+    }
+}*/

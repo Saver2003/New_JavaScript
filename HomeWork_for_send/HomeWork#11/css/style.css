@@ -1,0 +1,382 @@
+body {
+    min-width: 900px;
+    font-family: arial ,sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    background: #fff;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.block-1 {
+    background: #daf1fa;
+    padding: 50px;
+    width: 350px;
+}
+
+.form-block-1 {
+    border-top: 1px dotted #6d787d;
+    padding-top: 29px;
+    padding-left: 7px;
+    width: 237px;
+}
+
+.form-row-1 span {
+    font-family: verdana;
+    display: block;
+    font-size: 15px;
+    color: #787878;
+    font-style: italic;
+}
+
+.form-row-1 span a {
+    font-family: verdana;
+    font-style: normal;
+    font-size: 13px;
+    color: #1a90be;
+}
+
+.form-row-1 span::before {
+    display: inline-block;
+    width: 28px;
+    height: 11px;
+    content: "";
+    background: url(../img/key.png) 0 0 no-repeat;
+    padding-left: 5px;
+}
+
+.form-row-1 .login {
+    display: inline-block;
+    width: 135px;
+    height: 20px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 2px 2px 1px 0px rgba(213, 218, 224, 0.75) inset;
+    padding-left: 5px;
+}
+
+.form-row-2 .password {
+    display: inline-block;
+    width: 135px;
+    height: 20px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 2px 2px 1px 0px rgba(213, 218, 224, 0.75) inset;
+    padding-left: 5px;
+}
+
+.form-row-1 label {
+    font-size: 11px;
+    font-family: verdana;
+    color: #787878;
+    display: inline-block;
+    padding: 14px 7px 0 34px;
+}
+
+.form-row-2 label {
+    font-size: 11px;
+    font-family: verdana;
+    color: #787878;
+    display: inline-block;
+    padding: 14px 0px 10px 34px;
+}
+
+.form-row-3 label {
+    font-family: verdana;
+    font-size: 11px;
+    color: #787878;
+    padding-right: 24px;
+}
+
+.form-row-3 .check {
+    display: none;
+    padding-left: 50px;
+}
+
+.form-row-3 input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 53px;
+}
+
+.form-row-3 .check + label::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 34px;
+    width: 17px;
+    height: 15px;
+    background: url(../img/check-ic.png) 0px -19px no-repeat;
+}
+
+.form-row-3 .check:checked + label::before {
+    background-position: 0px 0;
+}
+
+.form-row-3 .enter {
+    width: 72px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid #4d726f;
+    background: rgb(46,169,133);
+    background: -moz-linear-gradient(top, rgb(46,169,133) 0%, rgb(33,126,102) 100%);
+    background: -webkit-linear-gradient(top, rgb(46,169,133) 0%,rgb(33,126,102) 100%);
+    background: linear-gradient(to bottom, rgb(46,169,133) 0%,rgb(33,126,102) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ea985', endColorstr='#217e66',GradientType=0 );
+    box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.55), 0px 0px 1px 0px rgba(86, 186, 157, 055) inset;
+    font-family: verdana ,sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.form-row-3 .enter:hover {
+    background: rgb(33,126,102);
+    background: -moz-linear-gradient(top, rgb(33,126,102) 0%, rgb(46,169,133) 100%);
+    background: -webkit-linear-gradient(top, rgb(33,126,102) 0%,rgb(46,169,133) 100%);
+    background: linear-gradient(to bottom, rgb(33,126,102) 0%,rgb(46,169,133) 100%);
+}
+
+.form-row-4 a {
+    display: inline-block;
+    font-family: verdana;
+    font-size: 11px;
+    color: #1b6fb6;
+    padding-top: 12px;
+    padding-left: 109px;
+}
+
+.block-2 {
+    width: 344px;
+}
+
+.form-block-2 {
+    margin: 20px;
+    border: 2px dashed #fbdb98;
+    padding: 20px 0 0 33px;
+    border-image: url(../img/border.png) 2 round round ;
+}
+
+.form-row-5 h3 {
+    font-family: arial;
+    font-size: 18px;
+    color: #5a5a5a;
+    margin: 0;
+    padding: 2px 0 4px 0;
+}
+
+.form-row-5 p {
+    width: 200px;
+    margin: 0;
+    font-size: 12px;
+    color: #0d0d0d;
+    padding: 0 0 6px 2px;
+    line-height: 17px;
+}
+
+.form-row-6 input[type="radio"] + label {
+    display: block;
+    position: relative;
+    padding-left: 37px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.form-row-6 .radio + label::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 18px;
+    width: 13px;
+    height: 13px;
+    background: url(../img/radio-ic.jpg) 0 0 no-repeat;
+}
+
+.form-row-6 .radio:checked + label::before {
+    background-position: 0 -18px;
+}
+
+.form-row-6 .radio {
+    display: none;
+}
+
+.form-row-6 {
+    padding-bottom: 11px;
+}
+
+.form-row-7 {
+    position: relative;
+    padding-bottom: 58px;
+}
+
+.form-row-7 .send {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 81px;
+    height: 31px;
+    font-size: 14px;
+    color: #000;
+    border-radius: 3px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom:  1px solid #c9c9c9;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    background: rgb(252,252,252);
+    background: -moz-linear-gradient(top, rgb(252,252,252) 0%, rgb(240,240,240) 100%);
+    background: -webkit-linear-gradient(top, rgb(252,252,252) 0%,rgb(240,240,240) 100%);
+    background: linear-gradient(to bottom, rgb(252,252,252) 0%,rgb(240,240,240) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f0f0f0',GradientType=0 );
+}
+
+.form-row-7 .send:hover {
+    background: rgb(240,240,240);
+    background: -moz-linear-gradient(top, rgb(240,240,240) 0%, rgb(252,252,252) 100%);
+    background: -webkit-linear-gradient(top, rgb(240,240,240) 0%,rgb(252,252,252) 100%);
+    background: linear-gradient(to bottom, rgb(240,240,240) 0%,rgb(252,252,252) 100%);
+}
+.form-row-7 a {
+    font-size: 12px;
+    color: #535353;
+    position: absolute;
+    bottom: 33px;
+    right: 75px;
+    text-shadow: 0px -1px 0px rgba(150, 150, 150, 0.3);
+}
+
+.block-3 {
+    background: #e9e6e6;
+    width: 328px;
+}
+
+.form-block-3 {
+    margin: 21px 20px 20px 30px;
+    background: #fff;
+    display: inline-block;
+    width: 267px;
+    padding: 5px 27px 20px 18px;
+    border-radius: 4px;
+}
+
+.form-row-8 h3 {
+    font-size: 16px;
+    color: #475965;
+    padding-left: 0;
+    padding-bottom: 15px;
+}
+
+.form-row-8 {
+    position: relative;
+}
+
+.user {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 17px;
+}
+
+.user input {
+    width: 228px;
+    height: 35px;
+    padding: 0 3px 0 58px;
+    border: 1px solid #959fa9;
+    opacity: 0.4;
+    font-family: arial;
+    font-size: 13px;
+    color: #959fa9;
+}
+
+.user label {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 43px;
+    height: 33px;
+    border-right: 1px solid #959fa9;
+    background: url(../img/user-icon-1.png) 50% 50% no-repeat;
+    opacity: 0.4;
+}
+
+.user input:focus {
+    opacity: 1;
+}
+
+.user input:focus +label {
+    opacity: 1;
+}
+
+.lock {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 23px;
+}
+
+.lock input {
+    width: 228px;
+    height: 35px;
+    padding: 0 3px 0 58px;
+    border: 1px solid #959fa9;
+    opacity: 0.4;
+    font-family: arial;
+    font-size: 13px;
+    color: #959fa9;
+}
+
+.lock label {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 43px;
+    height: 33px;
+    border-right: 1px solid #959fa9;
+    background: url(../img/lock-icon.png) 50% 50% no-repeat;
+    opacity: 0.4;
+}
+
+.lock input:focus {
+    opacity: 1;
+}
+
+.lock input:focus + label {
+    opacity: 1;
+}
+
+.form-row-8 .sign {
+    border: none;
+    height: 40px;
+    width: 228px;
+    background: #21b8c6;
+    color: #fff;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.form-row-8 .sign:hover {
+    background: #21adc6;
+}
+
+.form-row-8 .link {
+    font-family: arial;
+    font-size: 13px;
+    color: #7d8e9a;
+    padding-left: 23px;
+}
+
+.form-row-8 .link a {
+    color: #475965;
+}
+
+.form-row-8 .link a::after {
+    display: inline-block;
+    content: "";
+    width: 12px;
+    height: 9px;
+    background: url(../img/arrow.png) 0 0 no-repeat;
+    position: absolute;
+    bottom: 4px;
+    right: 11px;
+}

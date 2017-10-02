@@ -1,0 +1,358 @@
+header {
+    height: 97px;
+    background: #2e3b4e;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    padding-top: 33px;
+    float: left;
+}
+
+.menu {
+    float: right;
+}
+
+.menu ul {
+
+}
+
+.menu li {
+    display: inline-block;
+    padding-left: 70px;
+    padding-top: 25px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 13px;
+}
+
+body {
+    background: #a2ca28;
+}
+
+.block-items {
+    display: table;
+}
+
+.block {
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 98px;
+}
+
+.block.block-item-1 {
+    width: 35%
+}
+
+.block.block-item-2 {
+    width: 35%
+}
+
+.block.block-item-3 {
+    width: 30%
+}
+
+.block-items h4 a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.block-item-1 .icon {
+    width: 44px;
+    height: 41px;
+    display: inline-block;
+    background-image: url(../img/case.png);
+    background-repeat: no-repeat;
+}
+
+.block-item-1 span {
+    display: block;
+    padding-top: 18px;
+}
+
+.block-item-1 p {
+    font-size: 14px;
+    color: #fff;
+    padding-right: 100px;
+    line-height: 24px;
+}
+
+.block-item-2 .icon {
+    width: 45px;
+    height: 44px;
+    display: inline-block;
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+}
+
+.block-item-2 span {
+    display: block;
+    padding-top: 15px;
+}
+
+.block-item-2 p {
+    font-size: 14px;
+    color: #fff;
+    padding-right: 100px;
+    line-height: 24px;
+}
+
+.block-item-3 .icon {
+    width: 47px;
+    height: 33px;
+    display: inline-block;
+    background-image: url(../img/cloud.png);
+    background-repeat: no-repeat;
+}
+
+.block-item-3 span {
+    display: block;
+    padding-top: 26px;
+}
+
+.block-item-3 p {
+    font-size: 14px;
+    color: #fff;
+    padding-right: 30px;
+    line-height: 24px;
+}
+
+.block-items .link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 100% 65%;
+}
+
+.block-items .arrow {
+    padding-left: 23px;
+}
+
+.img-1 {
+    background-color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.img-1 img {
+    float: right;
+}
+
+.img-1 h6 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #fd634e;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.img-1 h3 {
+    height: 100px;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #a2ca28;
+    /*padding-left: 74px;*/
+    margin-top: 0;
+    background-image: url(../img/drop.png);
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.img-1 p {
+    width: 310px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    color: #656e74;
+    line-height: 26px;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.img-1 a {
+    font-size: 18px;
+    font-style: normal;
+    color: #a2ca28;
+    display: block;
+    line-height: 26px;
+    padding-bottom: 72px;
+}
+
+.img-2 img{
+    float: left;
+}
+
+.img-2 {
+    background-color: #fff;
+    text-align: center;
+    margin-top: 0;
+}
+.img-2 h6 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #fd634e;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.img-2 h3 {
+    height: 100px;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #a2ca28;
+    /*padding-left: 74px;*/
+    margin-top: 0;
+    background-image: url(../img/drop.png);
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.img-2 p {
+    width: 310px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    color: #656e74;
+    line-height: 26px;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.img-2 a {
+    font-size: 18px;
+    font-style: normal;
+    color: #a2ca28;
+    display: block;
+    line-height: 26px;
+    padding-bottom: 73px;
+}
+
+footer {
+    background: #0d1119;
+    height: 97px;
+    text-align: justify;
+    height: 247px;
+    margin-top: 0;
+}
+
+.about {
+    width: 460px;
+    float: left;
+}
+
+footer .about h6 {
+    color: #fff;
+    font-size: 16px;
+    padding-top: 60px;
+    margin: 0;
+    font-weight: normal;
+}
+
+footer .about p {
+    color: #8297a7;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.social {
+    float: right;
+}
+
+.social h6 {
+    color: #fff;
+    font-size: 16px;
+    padding-top: 60px;
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 28px;
+}
+
+.facebook i {
+    background-color: #2e3192;
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.facebook i {
+    background-image: url(../img/facebook.png);
+}
+
+.twitter i {
+    background-color: #00aeef;
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.twitter i {
+    background-image: url(../img/twitter.png);
+}
+
+.youtube i {
+    background-color: #ed3123;
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.youtube i {
+    background-image: url(../img/youtube.png);
+}
+
+.linkedin i {
+    background-color: #171a8f;
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.linkedin i {
+    background-image: url(../img/linkedin.png);
+}

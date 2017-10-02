@@ -1,0 +1,10 @@
+.navbar {
+    border-radius: 0;
+}
+.features img {
+    width: 100%;
+    height: auto;
+}
+.features .caption {
+    text-align: center;
+}

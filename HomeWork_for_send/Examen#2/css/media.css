@@ -1,0 +1,188 @@
+@media screen and (max-width: 1183px) {
+    .block-3 .item-1 {
+        margin: 0 2%;
+        width: 45%;
+    }
+    .block-3 .item-2 {
+        margin: 0 2%;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1148px) {
+    .block-2 {
+        justify-content: space-around;
+    }
+    .block-2 a {
+        margin: 40px 10%;
+        width: 13%;
+    }
+}
+
+@media screen and (max-width: 1097px) {
+    .gallery {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .block-2 {
+        margin-bottom: 50px;
+    }
+    .block-3 .item-1 {
+        margin: 0 2%;
+        width: 80%;
+        margin-bottom: 80px;
+    }
+    .block-3 .item-2 {
+        margin: 0 2%;
+        width: 80%;
+    }
+    .item p {
+        font-size: 16px;
+    }
+    .item-2 p {
+        color: #000;
+    }
+    .block-3.container h3 {
+        padding-bottom: 25px;
+        margin: 0;
+    }
+    .form {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .form {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 724px) {
+    .container ul li {
+        display: block;
+        padding-bottom: 15px;
+    }
+    .container ul li a {
+        color: #36aeea;
+    }
+    .container ul li:hover {
+        border: none;
+    }
+    .nav {
+        position: absolute;
+        top: 26px;
+        left: 180px;
+        padding-bottom: 19px;
+    }
+    .container .nav-btn {
+        display: block;
+        padding: 0;
+        width: 34px;
+        height: 16px;
+        background: #fff;
+        border: none;
+    }
+    .nav-btn i {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background: #36aeea;
+        top: 8px;
+        left: 11px;
+        margin: -1px 0 0 -9px;
+    }
+    .nav-btn i::before, .nav-btn i::after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background: #36aeea;
+        position: absolute;
+        left: 0;
+    }
+    .nav-btn i::before {
+        top: -6px;
+    }
+    .nav-btn i::after {
+        top: 6px;
+    }
+    .container ul {
+        display: none;
+        width: 150px;
+        position: absolute;
+        top: 35px;
+        right: -76px;
+        background: transparent;
+    }
+    .nav:hover ul {
+        display: block;
+    }
+    header .contact {
+        padding: 8px 30px 8px;
+        font-size: 12px;
+    }
+    .block-2 a {
+        margin: 40px 15%;
+    }
+}
+@media screen and (max-width: 610px) {
+    .block-2 a {
+        margin: 30px 15%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .block-3 .item-1 {
+        margin-bottom: 40px;
+    }
+    .form button {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .form {
+        width: 100%;
+    }
+    .form .name {
+        padding: 21px 45% 21px 20px;
+    }
+    .form .phone {
+        padding: 21px 45% 21px 20px;
+    }
+    .form .e-mail {
+        padding: 21px 45% 21px 20px;
+    }
+    .form button {
+        padding: 25px 41% 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .item p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 353px) {
+    .nav {
+        position: absolute;
+        top: 26px;
+        left: 160px;
+    }
+    .form {
+        width: 100%;
+    }
+    .form .name {
+        padding: 21px 30% 21px 20px;
+    }
+    .form .phone {
+        padding: 21px 30% 21px 20px;
+    }
+    .form .e-mail {
+        padding: 21px 30% 21px 20px;
+    }
+    .form button {
+        padding: 25px 35% 25px;
+    }
+}

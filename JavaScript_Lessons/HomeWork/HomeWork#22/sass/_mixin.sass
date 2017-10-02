@@ -1,0 +1,38 @@
+=tablet
+  @media screen and (max-width: 500px)
+    @content
+
+=sm
+  @media screen and (max-width: 570px)
+    @content
+
+=md
+  @media screen and (max-width: 960px)
+    @content
+
+=large
+  @media screen and (max-width: 1124px)
+    @content
+
+=card-title
+  font-family: $ff-main
+  font-size: 31px
+  color: $text-color
+  font-weight: normal
+  margin: 17px 0 4px
+
+=card-text
+  font-family: $ff-add
+  font-size: 16px
+  color: $text-color
+  font-weight: normal
+  width: 63%
+  display: inline-block
+  margin-bottom: 54px
+
+=triangle($triangle-color)
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 15px 15px 0 15px
+  border-color: $triangle-color transparent transparent transparent

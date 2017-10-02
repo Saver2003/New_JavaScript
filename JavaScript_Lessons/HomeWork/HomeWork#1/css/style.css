@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+body {
+	background: #DDDCD9;
+}
+
+header {
+	text-align: justify;
+	letter-spacing: 1px;
+	height: 8em;
+	padding: 2em 10%;
+	background: #8DB5D1;
+	color: #D9D9D9;	
+	margin-bottom: 10px;
+}
+
+header h1,
+header nav,
+header img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header nav {
+	font-size: 1.2em;
+}
+
+header img {
+	width: 150px;
+	float: left;
+	margin-top: 4px;
+}
+
+header::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+h1 {
+	font-family: "Segoe-UI", Arial, sans-serif;
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 50px;
+	font-family: "Segoe-UI", Arial, sans-serif;	
+	text-align: center;
+}
+
+h3 {
+	width: auto;
+	color: #555555;
+	background-color: #66AECC;
+	margin-right: 40px;
+	margin-top: -15px;
+	padding: 3px;
+	float: right;
+	font-family: "Segoe-UI", Arial, sans-serif;
+	border-radius: 5px;
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.first {
+	width: 49%;
+	background-color: #CDCDCD;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+
+
+.third {
+	font-size: 1.5em;
+	color: #616161;
+}
+
+span {
+	color: #E4FF00;
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+}
+
+a, a:hover {
+	-webkit-transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-o-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+	-transition: all.6s ease;
+}
+
+p {	
+	border-radius: 5px;
+	color: #414141;
+	font-size: 1em;
+	text-align: center;
+}
+
+img {
+	margin: 0 auto;
+		
+		
+	width: 30%;
+	
+}
+
+.img {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	
+
+}
+
+.gallery {
+	color: #5A5959;	
+	font-size: 1.5em;
+	text-shadow: 10px 10px 10px;
+	
+}
+
+footer {
+	width: 98%;
+	float: left;
+	padding: 1%;
+	background-color: #75A0BE;	
+	margin-top: 10px;
+}
+
+footer #social {
+	float: left;
+	width: 50%;
+}
+
+footer #social img {
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	float: left;
+	margin-right: -10px;
+}
+
+footer #rights {
+	float: right;
+	width: 50%;
+	text-align: right;
+	font-size: 1.1em;
+	margin-top: 30px;
+}
+
+ul {
+	background: #2FEA45;
+	width: 10%;
+}
+
+ol {
+	background: #992FEA;
+	width: 10%
+}
+
+table {
+	background: #F3BE1E;
+	width: 12%
+}
+
+
+ul,ol {
+	margin-bottom: 10px;
+}
+
+table {
+	border: 1px solid #000;
+}
+
+td {
+	border: 1px solid #000;
+	padding: 10px;
+}
+

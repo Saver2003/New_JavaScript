@@ -1,0 +1,7 @@
+sass --watch sass:css --no-cache --sourcemap=none --style compact
+
+sass --watch sass:css --no-cache --sourcemap=none --style expanded
+
+sass --watch sass:css --no-cache --sourcemap=none --style compressed
+
+sass-convert css/reset.css sass/_reset.sass

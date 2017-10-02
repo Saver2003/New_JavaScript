@@ -1,0 +1,85 @@
+@media screen and (max-width: 1024px) {
+  .content__col, .footer__content {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  promo-pic-img {
+    float: none;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .content__col {
+    width: 80%;
+  }
+  .footer__item {
+    width: 80%;
+  }
+  .social__title {
+    text-align: left;
+  }
+  .social__link {
+    float: none;
+  }
+  .social__group {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .main-nav {
+    position: relative;
+    display: inline-block;
+  }
+  .nav-btn {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 235px;
+    z-index: 10;
+  }
+  .main-nav__list {
+    display: none;
+    padding: 0;
+  }
+  .main-nav__item {
+    display: block;
+    padding: 10px 0;
+  }
+  .main-nav:hover .main-nav__list {
+    display: block;
+    position: absolute;
+    top: 23px;
+    right: -256px;
+    width: 100px;
+    background: rgba(50, 79, 82, 0.95);
+    z-index: 9;
+  }
+  .social__icons {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav-btn {
+    position: absolute;
+    top: 2px;
+    left: 150px;
+  }
+  .main-nav:hover .main-nav__list {
+    position: absolute;
+    top: 23px;
+    right: -170px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .card__img-wrap {
+    float: none;
+    border: none;
+    margin-bottom: 20px;
+  }
+}

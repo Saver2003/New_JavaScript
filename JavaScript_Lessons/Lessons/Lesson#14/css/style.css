@@ -1,0 +1,210 @@
+body {
+    min-width: 320px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #153f60;
+    line-height: 1.3;
+    background: #fff;
+}
+/*font-family: 'Raleway', sans-serif;*/
+.container {
+    min-width: 320px;
+    max-width: 1174px;
+    margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+header {
+    height: 464px;
+    background: url(../img/sm-photo.jpg) 50% 0 no-repeat;
+    background-size: cover;
+}
+.logo {
+    width: 70px;
+    height: 70px;
+    background: #f26c4f url(../img/logo.png) 50% 50% no-repeat;
+    background-size: 22px;
+    color: transparent;
+    text-decoration: none;
+    float: left;
+}
+.nav-btn {
+    width: 70px;
+    height: 70px;
+    background: #1ac7c3;
+    border: none;
+    position: relative;
+    float: right;
+}
+.nav-btn i {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -9px;
+}
+.nav-btn i::before,
+.nav-btn i::after {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+}
+.nav-btn i::before {
+    top: -6px;
+}
+.nav-btn i::after {
+    top: 6px;
+}
+.main-nav {
+    position: relative;
+}
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 69px;
+    background: #1ac7c3;
+    width: 70%;
+    padding: 5px 10px;
+    display: none;
+}
+.main-nav:hover ul {
+    display: block;
+}
+.main-nav li {
+    margin: 0;
+    padding: 0;
+}
+.main-nav li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    display: block;
+    padding: 8px 5px;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+.main-nav li:last-child a {
+    border: none;
+}
+.block {
+    background: #fff;
+    /*width: 320px;
+    margin: 0 auto;*/
+}
+.block-1 .title-1 {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 56px 26px 23px;
+    margin: 0;
+}
+.block-1 .title-2 {
+    display: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 56px 20px 30px;
+    margin: 0;
+}
+.block-1 .part-1 {
+    font-size: 14px;
+    padding: 0 26px 24px;
+    line-height: 24px;
+}
+.block-1 .part-2 {
+    font-size: 14px;
+    padding: 0 26px 60px;
+    line-height: 24px;
+}
+.block-1 p:last-child {
+    font-size: 14px;
+    padding: 0 26px 30px;
+    line-height: 24px;
+    display: none;
+}
+
+.block-2 {
+    background: #1ac7c3;
+    height: 100%;
+}
+.block-2 .title-1 {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase;
+    padding: 52px 33px 33px;
+    margin: 0;
+}
+.block-2 .title-2 {
+    display: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 66px 20px 30px;
+    margin: 0;
+}
+.block-2 p {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 23px;
+    color: #fff;
+    padding: 0 33px 30px;
+}
+.block-2 p span {
+    display: none;
+}
+.block-3 {
+    background: #f26c4f;
+    clear: both;
+    position: relative;
+    padding-bottom: 161px;
+}
+
+.block-3  h3 {
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 49px;
+    padding: 35px 26px 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.block-3 p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    padding: 0 25px 30px 28px;
+}
+.block-3 .container .btn {
+    display: flex;
+    color: #f26c4f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 17px 74px 17px 74px;
+    border: none;
+    background: #fff;
+    margin: 0 auto;
+    /*position: absolute;
+    top: 298px;
+    left: 27px;*/
+}
