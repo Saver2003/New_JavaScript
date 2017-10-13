@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>homeWork#27.6</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var seconds = (prompt('Введите количество секунд:'));
+        var hours = Math.floor(seconds / 60 / 60);
+
+        if (seconds > 18000) {
+            alert(seconds + '\nОсталось ' + hours + ' часов.');
+        } else if (seconds <= 18000 && seconds >= 7200) {
+            alert(seconds + '\nОсталось ' + hours + ' часа.');
+        } else if (seconds < 7200 && seconds > 3600) {
+            alert(seconds + '\nОстался один час.');
+        } else if (seconds < 3600) {
+            alert(seconds + '\nОсталось менее часа.');
+        }
+    </script>
+
+</body>
+
+</html>
