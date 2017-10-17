@@ -2,38 +2,38 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>example.5</title>
+  <meta charset="utf-8">
+  <title>example.5</title>
 </head>
 
 <body>
-    <script>
-        while (true) {
-            var counter = 0;
-            var correctly = 0;
-            var wrong = 0;
-            var num1 = Math.floor(Math.random() * 9 + 1);
-            var num2 = Math.floor(Math.random() * 9 + 1);
-            var result = parseInt(prompt('Результат умножения ' + num1 + ' * ' + num2 + ' равен:'));
-            counter++;
+  <script>
+    var counter = 0;
+    var correctly = 0;
+    var wrong = 0;
 
-            if (result === null){
-              alert('Общее количество вопросов:' + counter + '\n' + 'Количество правильных ответов:' + correctly + '\n' + 'Количество неправильных ответов:' + wrong);
-              // break;
-            }
-            if (result === num1 * num2) {
-                alert('Правильно!');
-                correctly++;
-            } else if (result != num1 * num2){
-                alert('Неверно!');
-                wrong++;
-            }
+    while (true) {
+      var num1 = Math.floor(Math.random() * 9 + 1);
+      var num2 = Math.floor(Math.random() * 9 + 1);
+      var result = prompt('Результат умножения ' + num1 + ' * ' + num2 + ' равен:');
 
+      if (result === null) {
+        break;
+      }
 
-
-        }
-
-    </script>
+      counter++;
+      result = parseInt(result);
+      
+      if (result === num1 * num2) {
+        alert('Правильно!');
+        correctly++;
+      } else if (result != num1 * num2) {
+        alert('Неверно!');
+        wrong++;
+      }
+    }
+    alert('Общее количество вопросов: ' + counter + '\n' + 'Количество правильных ответов: ' + correctly + '\n' + 'Количество неправильных ответов: ' + wrong);
+  </script>
 
 </body>
 

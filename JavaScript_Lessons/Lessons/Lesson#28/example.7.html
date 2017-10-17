@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.7</title>
+</head>
+
+<body>
+  <script>
+    var digits = {
+      group0: 0,
+      group1: 0,
+      group2: 0,
+      group3: 0,
+      group4: 0,
+      group5: 0,
+      group6: 0,
+      group7: 0,
+      group8: 0,
+      group9: 0,
+    };
+
+    for (var i = 0; i < 100000; i++) {
+      var randomDigit = Math.floor(Math.random() * 99);
+
+      if (randomDigit >= 0 && randomDigit < 10) {
+        digits.group0++;
+      } else if (randomDigit >= 10 && randomDigit < 20) {
+        digits.group1++;
+      } else if (randomDigit >= 20 && randomDigit < 30) {
+        digits.group2++;
+      } else if (randomDigit >= 30 && randomDigit < 40) {
+        digits.group3++;
+      } else if (randomDigit >= 40 && randomDigit < 50) {
+        digits.group4++;
+      } else if (randomDigit >= 50 && randomDigit < 60) {
+        digits.group5++;
+      } else if (randomDigit >= 60 && randomDigit < 70) {
+        digits.group6++;
+      } else if (randomDigit >= 70 && randomDigit < 80) {
+        digits.group7++;
+      } else if (randomDigit >= 80 && randomDigit < 90) {
+        digits.group8++;
+      } else if (randomDigit >= 90 && randomDigit <= 99) {
+        digits.group9++;
+      }
+    }
+    alert('Group 0 = ' + digits.group0 + '\n' + 'Group 1 = ' + digits.group1 + '\n' + 'Group 2 = ' + digits.group2 + '\n' + 'Group 3 = ' + digits.group3 + '\n' + 'Group 4 = ' + digits.group4 + '\n' + 'Group 5 = ' + digits.group5 + '\n' + 'Group 6 = ' + digits.group6 + '\n' + 'Group 7 = ' + digits.group7 + '\n' + 'Group 8 = ' + digits.group8 + '\n' + 'Group 9 = ' + digits.group9)
+  </script>
+
+</body>
+
+</html>

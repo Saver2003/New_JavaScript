@@ -2,36 +2,40 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>example.4</title>
+  <meta charset="utf-8">
+  <title>example.4</title>
 </head>
 
 <body>
-    <script>
-        var sum = 0;
-        var counter = 0;
-        while (true) {
-            var value = prompt('Введите число от 1 - до 100:');
+  <script>
+    var sum = 0;
+    var counter = 0;
+    while (true) {
+      var value = prompt('Введите число от 1 - до 100:');
 
-            if (value === null) {
-                break;
-            }
+      if (value === null) {
+        break;
+      }
 
-            value = parseInt(value);
+      value = parseInt(value);
 
-            if (value < 1 || value > 100) {
-                alert('Введите правильное число!')
-                continue;
-            }
+      if (value < 1 || value > 100) {
+        alert('Введите правильное число!')
+        continue;
+      }
 
-            sum += value;
-            counter++;
-            var result = sum / counter;
+      sum += value;
+      counter++;
+      var result = sum / counter;
 
-        }
 
-        alert('Среднее арифметическое введённых чисел равно: ' + result);
-    </script>
+    }
+    if(sum) {
+      alert('Среднее арифметическое введённых чисел равно: ' + result);
+
+    }
+
+  </script>
 
 </body>
 

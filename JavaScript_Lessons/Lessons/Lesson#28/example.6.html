@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>example.6</title>
-  </head>
-  <body>
-    <script>    
 
-    </script>
+<head>
+  <meta charset="utf-8">
+  <title>example.6</title>
+</head>
 
-  </body>
+<body>
+  <script>
+    var border = {
+      x: 12,
+      y: 6,
+    }
+    var coordinatesX = prompt('Введите координаты своего дома по оси X:');
+    var coordinatesY = prompt('Введите координаты своего дома по оси Y:');
+
+    if (coordinatesX == border.x || coordinatesY == border.y) {
+      alert('Ваш дом находится на границе!');
+    } else if (coordinatesX < border.x && coordinatesY < border.y) {
+      alert('Ваш дом находится в юго-западном секторе Нлогонии.');
+    } else if (coordinatesX < border.x && coordinatesY > border.y) {
+      alert('Ваш дом находится в северо-западном секторе Нлогонии.');
+    } else if (coordinatesX > border.x && coordinatesY > border.y) {
+      alert('Ваш дом находится в северо-восточном секторе Нлогонии.');
+    } else if (coordinatesX > border.x && coordinatesY < border.y) {
+      alert('Ваш дом находится в юго-восточном секторе Нлогонии.');
+    }
+  </script>
+
+</body>
+
 </html>
