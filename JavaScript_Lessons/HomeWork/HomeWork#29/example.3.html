@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.3</title>
+</head>
+
+<body>
+  <script>
+    var power = function(num, exponent) {
+      var result = num;
+      if (exponent === null || exponent === '') {
+        exponent = 2;
+      }
+      exponent = parseInt(exponent);
+      for (var i = 1; i < exponent; i++) {
+        result = num * result;
+      }
+      return result;
+    };
+    var num = parseInt(prompt('Введите число:'));
+    var exponent = prompt('Введите степень числа:');
+    alert(power(num, exponent));
+    power();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    var Hotel = {
+      rooms: 10,
+      bookRoom: function() {
+        if (this.rooms > 0) {
+          rooms--;
+          console.log('Room was booked!');
+        } else {
+          console.log('All rooms are booked!');
+        }
+      }
+    };
+
+    Hotel.bookRoom();
+    console.log(Hotel.rooms); // 9
+  </script>
+
+</body>
+
+</html>

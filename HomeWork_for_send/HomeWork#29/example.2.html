@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.2</title>
+</head>
+
+<body>
+  <script>
+    var getNum = function() {
+      var number = prompt('Введите любое число:');
+      if (isNaN(number)) {
+        alert('Вы ввели не число.');
+      } else if (number === null) {
+        alert('Вы нажали отмена.');
+      }
+      number = parseInt(number);
+      if (number > 0) {
+        alert('Вы ввели положительное число.');
+      } else if (number < 0) {
+        alert('Вы ввели отрицательное число.');
+      } else if (number === 0) {
+        alert('Вы ввель ноль.');
+      }
+      return number;
+    };
+    getNum();
+  </script>
+</body>
+
+</html>

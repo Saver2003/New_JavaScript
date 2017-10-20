@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    var Dice = {
+      randomInt: function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      },
+      d20: function() {
+        return this.randomInt(1, 20);
+      },
+      d6: function() {
+        return this.randomInt(1, 6);
+      },
+      d10: function() {
+        return this.randomInt(1, 10);
+      }
+    };
+
+    console.log(Dice.d20());
+    console.log(Dice.d6());
+    console.log(Dice.d10());
+    
+  </script>
+
+</body>
+
+</html>

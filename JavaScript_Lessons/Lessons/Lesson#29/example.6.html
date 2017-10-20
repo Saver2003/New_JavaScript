@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    var askForNumber = function(message, min, max) {
+      var number;
+      do {
+        number = parseInt(prompt(message));
+      } while (!number || number < min || number > max);
+
+      return number;
+    };
+
+    var grade = askForNumber('What is your grade?', 0, 100);
+  </script>
+
+</body>
+
+</html>
