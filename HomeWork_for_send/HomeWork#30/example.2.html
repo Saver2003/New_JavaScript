@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.2</title>
+</head>
+
+<body>
+  <script>
+    var Calculator = {
+      read: function() {
+        this.numOne = parseInt(prompt('Введите любое число:'));
+        this.numTwo = parseInt(prompt('Введите любое число:'));
+      },
+      numOne: this.numOne,
+      numTwo: this.numTwo,
+      sum: function() {
+        return this.numOne + this.numTwo;
+      },
+      multiply: function() {
+        return this.numOne * this.numTwo;
+      }
+    };
+    Calculator.read();
+    alert('Сумма двух чисел равна: ' + Calculator.sum() + '\n' + 'Произведение двух чисел равно: ' + Calculator.multiply());
+  </script>
+</body>
+
+</html>

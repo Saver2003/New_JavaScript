@@ -8,13 +8,13 @@
 
 <body>
   <script>
-    var getFahrengeith = function(fahrengeith) {
+    var getFahrengeith = function() {
       var celsium;
       celsium = parseInt(prompt('Введите температуру в градусах цельсия: '));
-      var fahrengeith = (celsium * 9 / 5) + 32;
-      alert('Температура по Фаренгейту составляет ' + fahrengeith + ' градусов.');
+      var fahrengeith = Math.floor((celsium * 9 / 5) + 32);
+      return fahrengeith;
     };
-    getFahrengeith();
+    alert('Температура по Фаренгейту составляет ' + getFahrengeith() + ' градусов.');
   </script>
 
 </body>

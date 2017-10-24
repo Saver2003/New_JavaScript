@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.1-3</title>
+</head>
+
+<body>
+  <script>
+    var Notebook = {
+      brand: 'HP',
+      model: 'ProBook 4530s',
+      operatingSystem: 'Linux',
+      getFullName: function() {
+        return 'Notebook ' + this.brand + ' ' + this.model + '\n' + 'Operating system: ' + this.operatingSystem;
+      }
+    };
+    alert(Notebook.getFullName());
+  </script>
+</body>
+
+</html>

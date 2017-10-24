@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.5</title>
+</head>
+
+<body>
+  <script>
+    var floor = prompt('Введите номер этажа, от 1 до 16:');
+
+    var Elevator = {
+      floor: 1,
+      toFloor: function(floor) {
+        if (floor >= 1 && floor <= 16) {
+          while (this.floor != floor) {
+            this.printFloor();
+            if (this.floor > floor) {
+              this.downOneFloor();
+            } else if (this.floor < floor) {
+              this.upOneFloor();
+            }
+          }
+          this.printFloor();
+        } else {
+          console.log('Error floor');
+        }
+      },
+      printFloor: function() {
+        console.log(this.floor);
+      },
+      upOneFloor: function() {
+        this.floor++;
+      },
+      downOneFloor: function() {
+        this.floor--;
+      }
+    };
+    Elevator.toFloor(floor);
+  </script>
+</body>
+
+</html>

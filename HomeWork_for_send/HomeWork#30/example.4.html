@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>example.4</title>
+</head>
+
+<body>
+  <script>
+    var guest = [" Alex", " Sam", " Duke", " Niki", " Marta", " Diana"];
+    var Host = {
+      guestList: [],
+      setGuestList: function(names) {
+        for (var i = 0; i < names.length; i++) {
+          var randomNum = Math.floor(Math.random() * 100 + 1);
+          if (randomNum < 80) {
+            this.guestList.push(names[i]);
+          }
+        }
+      }
+    };
+    Host.setGuestList(guest);
+    alert('Было предложено ' + guest.length + ' имен' + '\n' + 'После утверждения осталось ' + Host.guestList.length + ' приглашенных' + '\n' + 'Список приглашенных гостей: ' + Host.guestList);
+  </script>
+</body>
+
+</html>

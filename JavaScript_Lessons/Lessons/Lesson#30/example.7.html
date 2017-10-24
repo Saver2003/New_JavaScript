@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <script>
 
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    var age = 30;
+
+    var john = {
+      name: 'John',
+      lastName: 'Doe',
+      age: 20,
+      about: function() {
+        return 'I am a ' + this.age + 'year-old programmer' + '. I am not ' + window.age + ' yet.';
+      }
+    };
+
+    console.log(john.about());
+  </script>
+</body>
+
 </html>

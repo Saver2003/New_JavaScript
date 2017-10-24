@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    var Person = {
+      firstName: 'John',
+      lastName: 'Doe',
+      series: [],
+      getFullName: function() {
+        return this.firstName + ' ' + this.lastName;
+      },
+      addSeries: function(seriesName) {
+        this.series.push(seriesName);
+      },
+      getFavoriteSeriesMessage: function() {
+        var message = 'My favorite series are: ';
+        
+        for (var i = 0; i < this.series.length; i++) {
+          message += this.series[i];
+          if (i < this.series.length - 1) {
+            message += ', ';
+          } else {
+            message += '.';
+          }
+        }
+
+        message += this.series.join(', ') + '.';
+
+        return message;
+      }
+    };
+    Person.addSeries('House MD');
+    Person.addSeries('How I Met Your Mother');
+    Person.addSeries('Big Bang Theory');
+    console.log(Person.getFullName());
+    console.log(Person.getFavoriteSeriesMessage());
+  </script>
+
+</body>
+
+</html>
