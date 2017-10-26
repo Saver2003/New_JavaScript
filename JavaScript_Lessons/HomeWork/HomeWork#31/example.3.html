@@ -19,8 +19,7 @@
         count++;
         if (userNum < 1 || userNum > 7 || isNaN(userNum)) {
           count--;
-        }
-        if (userNum != randomNum) {
+        } else if (userNum != randomNum) {
           continue;
         } else if (userNum === null) {
           alert('Game over');
