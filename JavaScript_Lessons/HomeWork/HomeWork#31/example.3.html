@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.3</title>
+</head>
+
+<body>
+  <script>
+    var game = function(randomNum) {
+      var count = 0;
+      var randomNum = Math.floor(Math.random() * 7 + 1);
+      var randomNum = parseInt(randomNum);
+
+      while (count < 3) {
+        var userNum = prompt('Введите число от 1 до 7');
+        var userNum = parseInt(userNum);
+        count++;
+        if (userNum < 1 || userNum > 7 || isNaN(userNum)) {
+          count--;
+        }
+        if (userNum != randomNum) {
+          continue;
+        } else if (userNum === null) {
+          alert('Game over');
+          break;
+        } else if (userNum === randomNum) {
+          alert('You win!');
+          break;
+        }
+      }
+      alert('Game over');
+
+    }
+
+    game();
+  </script>
+
+</body>
+
+</html>

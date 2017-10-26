@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>example.1</title>
+  </head>
+  <body>
+    <script>
+    var salaries = {
+      "Vasiliy": 100,
+      "Piotr": 300,
+      "Daria": 250,
+      "isPaid": false
+    };
+    var findSum = function(salaries) {
+      var sum = 0;
+      for (var key in salaries) {
+        if (isNaN(salaries[key])) {
+          continue;
+        } else {
+          sum += salaries[key];
+        }
+      }
+      return sum;
+    }
+    alert(findSum(salaries));
+    </script>
+
+  </body>
+</html>

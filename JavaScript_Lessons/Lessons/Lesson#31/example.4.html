@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <script>
 
-    </script>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
-  </body>
+<body>
+  <script>
+    var PiggyBank = {
+      coins: {
+        1: 0,
+        3: 0,
+        5: 0,
+        10: 0,
+        20: 0
+      },
+      addCoin: function(value) {
+        switch (value) {
+          case 1:
+          case 3:
+          case 5:
+          case 10:
+            this.coins[value]++;
+            break;
+            defoult:
+              console.log('No such coins');
+        }
+      },
+      getCoinsMessage: function() {
+        var message = '';
+        for (var key in this.coins) {
+          message += key + ': ' + this.coins[key] + '\n';
+        }
+
+        return message;
+      },
+      getTotal: function() {
+        var sum = 0;
+        for (var key in this.coins) {
+          sum += this.coins[key] * key;
+        }
+        return sum;
+      }
+    };
+
+    PiggyBank.addCoin(1);
+    PiggyBank.addCoin(3);
+    PiggyBank.addCoin(5);
+    PiggyBank.addCoin(10);
+    PiggyBank.addCoin(14);
+
+    console.log(PiggyBank.getCoinsMessage());
+    // 1:   1
+    // 3:   1
+    // 5:   1
+    // 10:  1
+
+
+    console.log(PiggyBank.getTotal());
+  </script>
+
+</body>
+
 </html>

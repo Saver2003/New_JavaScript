@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>example.2</title>
+  </head>
+  <body>
+    <script>
+    var numbers = [1, 2, 5, 10, 15, 25, 32, 'Jack', 64];
+    var findEvenSum = function(numbers) {
+      var sum = 0;
+      for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 != 0) {
+          continue;
+        } else {
+          sum += numbers[i];
+        }
+      }
+      return sum;
+    }
+    alert(findEvenSum(numbers));
+    </script>
+
+  </body>
+</html>
