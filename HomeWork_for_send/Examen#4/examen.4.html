@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>examen.4</title>
+</head>
+
+<body>
+  <script>
+    var Dragon = {
+      hp: 2000, // Жизненная энергия
+      defense: 120, // Защита
+      str: 300, // Сила
+      weapon: 0, // Оружие
+      toString: function() {
+        return 'Дракон: ' + this.hp + ' HP';
+      },
+      modifyHealth: function(hp) {
+        return this.hp -= heroDamage;
+      }
+    };
+    console.log(Dragon.toString());
+
+    var Hero = {
+      hp: 1000, // Жизненная энергия
+      defense: 100, // Защита
+      str: 120, // Сила
+      weapon: 250, // Оружие
+      shield: 150, // Щит
+      isShieldEquipped: false,
+      toString: function() {
+        return 'Герой: ' + this.hp + ' HP';
+      },
+      modifyHealth: function(hp) {
+        return this.hp -= dragonDamage;
+      },
+      equipShield: function() {
+        if (this.isShieldEquipped === false) {
+          this.defense = this.defense + this.shield;
+        }
+        return this.defense;
+      },
+      removeShield: function() {
+        if (this.isShieldEquipped === true) {
+          this.defense = this.equipShield() - this.shield;
+        }
+        return this.defense;
+      },
+      
+    };
+    console.log(Hero.toString());
+
+    var separator = '=======================================';
+    Dragon.hp = parseInt(Dragon.hp);
+    var heroDamageStr = 'Герой наносит дракону урон на ';
+    var dragonDamagStr = 'Дракон ударил героя на ';
+
+    while (true) {
+      var heroChoice = prompt('Нажмите клавишу "1", если хотите, чтобы герой атаковал дракона' + '\n' + 'Нажмите клавишу "2", если хотите, чтобы герой отдохнул' + '\n' + 'Нажмите клавишу "3", если хотите, чтобы герой защищался');
+      heroChoice = parseInt(heroChoice);
+
+
+      var random = Math.floor(Math.random() * 100 + 1);
+      var heroDamage = Hero.str + Hero.weapon - Dragon.defense;
+      var dragonDamage = Dragon.str + Dragon.weapon - Hero.defense;
+
+      var heroAction = function() {
+        if (random <= 75 && heroChoice === 1) {
+          Dragon.hp = Dragon.hp - heroDamage;
+          console.log(separator + '\n' + heroDamageStr + heroDamage + ' очков');
+        } else if (random > 75) {
+          console.log('Акела промахнулся...')
+        }
+        if (heroChoice === 2 || heroChoice === 3) {
+          heroDamage = 0;
+        }
+      }
+      heroAction();
+
+      if (Dragon.hp <= 0) {
+        Dragon.hp =0;
+        console.log('Дракон побежден!' + '\n' + Dragon.toString());
+        break;
+      }
+
+      var dragonAction = function() {
+        if (random <= 50) {
+          Hero.hp = Hero.hp - dragonDamage;
+          console.log(dragonDamagStr + dragonDamage + ' очков' + '\n' + Dragon.toString() + '\n' + Hero.toString());
+        } else {
+          console.log('Дракон спал, герою везло');
+        }
+      }
+      dragonAction();
+
+      if (Hero.hp <= 0) {
+        Hero.hp = 0;
+        console.log('Герой пал смертью храбрых.' + '\n' + Hero.toString());
+        break;
+      }
+
+      if (heroChoice === 1 && Dragon.hp > 0) {
+        heroAction();
+      }
+      if (heroChoice === 2) {
+        dragonAction();
+      }
+      if (heroChoice === 3) {
+        Hero.equipShield();
+        dragonAction();
+      }
+      if (Hero.defense > 100 || Hero.isShieldEquipped === true) {
+        Hero.removeShield();
+      }
+      if (heroChoice === null) {
+        break;
+      }
+    }
+  </script>
+</body>
+
+</html>
