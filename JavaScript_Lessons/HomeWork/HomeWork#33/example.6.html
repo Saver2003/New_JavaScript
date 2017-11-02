@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>example.6</title>
+  </head>
+  <body>
+    <ul id="task-list">
+
+    </ul>
+
+    <script>
+    var taskList = document.getElementById('task-list');
+    while(true) {
+      var taskElement = prompt('Введите задачу:');
+      if (taskElement === null || taskElement === '') {
+        break;
+      }
+      var element = document.createElement('li');
+      element.innerHTML = taskElement;
+      taskList.appendChild(element);
+    }
+    </script>
+  </body>
+</html>

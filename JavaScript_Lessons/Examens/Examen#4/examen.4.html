@@ -11,7 +11,7 @@
     var Dragon = {
       hp: 2000, // Жизненная энергия
       defense: 120, // Защита
-      str: 300, // Сила
+      str: 250, // Сила
       weapon: 0, // Оружие
       toString: function() {
         return 'Дракон: ' + this.hp + ' HP';
@@ -36,18 +36,12 @@
         return this.hp -= dragonDamage;
       },
       equipShield: function() {
-        if (this.isShieldEquipped === false) {
           this.defense = this.defense + this.shield;
-        }
-        return this.defense;
       },
       removeShield: function() {
-        if (this.isShieldEquipped === true) {
-          this.defense = this.equipShield() - this.shield;
-        }
-        return this.defense;
+          this.defense = this.defense - this.shield;
       },
-      
+
     };
     console.log(Hero.toString());
 
@@ -76,7 +70,7 @@
           heroDamage = 0;
         }
       }
-      heroAction();
+      // heroAction();
 
       if (Dragon.hp <= 0) {
         Dragon.hp =0;
@@ -86,13 +80,16 @@
 
       var dragonAction = function() {
         if (random <= 50) {
+          if (dragonDamage < 0) {
+            dragonDamage = 0;
+          }
           Hero.hp = Hero.hp - dragonDamage;
           console.log(dragonDamagStr + dragonDamage + ' очков' + '\n' + Dragon.toString() + '\n' + Hero.toString());
         } else {
           console.log('Дракон спал, герою везло');
         }
       }
-      dragonAction();
+      // dragonAction();
 
       if (Hero.hp <= 0) {
         Hero.hp = 0;
@@ -102,6 +99,7 @@
 
       if (heroChoice === 1 && Dragon.hp > 0) {
         heroAction();
+        dragonAction();
       }
       if (heroChoice === 2) {
         dragonAction();
@@ -109,8 +107,6 @@
       if (heroChoice === 3) {
         Hero.equipShield();
         dragonAction();
-      }
-      if (Hero.defense > 100 || Hero.isShieldEquipped === true) {
         Hero.removeShield();
       }
       if (heroChoice === null) {

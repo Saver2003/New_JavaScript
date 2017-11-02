@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <ol id="list">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+  </ol>
+  <script>
+    var newLi = document.createElement('li');
+    newLi.innerHTML = 'Just passing by!';
+
+    var list = document.getElementById('list');
+    list.insertBefore(newLi, list.children[1]);
+  </script>
+
+</body>
+
+</html>

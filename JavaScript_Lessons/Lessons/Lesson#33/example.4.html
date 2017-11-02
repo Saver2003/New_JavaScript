@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="container"></div>
+  <script>
+    var element = document.createElement('div');
+    element.innerHTML = 'Hello, world!';
+    element.style.color = 'red';
+    var container = document.getElementById('container');
+    container.appendChild(element);
+    element.style.color = 'blue';
+    element = document.createElement('p');
+    var myDiv = container.children[0];
+    console.log(myDiv);
+    console.log(element);
+  </script>
+</body>
+
+</html>

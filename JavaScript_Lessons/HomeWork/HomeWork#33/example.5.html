@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.5</title>
+</head>
+
+<body>
+  <div id="cart-items">
+    <div class="item">Milk 1 l.<span class="qty">x 2</span></div>
+    <div class="item">Cola 1.5 l. <span class="qty">x 1</span></div>
+    <div class="item">Bread<span class="qty">x 2</span></div>
+    <div class="item">Cheese<span class="qty">x 1</span></div>
+    <div class="item">Chocolate bar<span class="qty">x 3</span></div>
+  </div>
+
+  <script>
+  var list = document.getElementById('cart-items');
+  var elements = document.getElementsByClassName('item');
+  elements[1].remove();
+  var newQty = document.createElement('span');
+  newQty.className = 'qty';
+  newQty.innerHTML = 'x 4'
+  var newItem = document.createElement('div');
+  newItem.className = 'item';
+  newItem.innerHTML = 'Canned Fish';
+  newItem.appendChild(newQty);
+  list.replaceChild(newItem, list.children[3]);
+  // list.replaceChild(newQty, list.children[3]);
+  </script>
+
+
+</body>
+
+</html>

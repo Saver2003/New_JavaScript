@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>example.3</title>
+</head>
+
+<body>
+  <ol id="todo-list"></ol>
+
+  <script>
+    var tasks = ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat'];
+
+
+    var todoList = document.getElementById('todo-list');
+    for (var i = 0; i < tasks.length; i++) {
+      var listItem = document.createElement('li');
+      listItem.className = 'task';
+      listItem.innerHTML = tasks[i];
+      todoList.insertBefore(listItem, todoList.children[0]);
+
+
+    }
+  </script>
+
+</body>
+
+</html>
