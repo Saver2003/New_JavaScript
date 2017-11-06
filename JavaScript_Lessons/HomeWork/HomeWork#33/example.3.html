@@ -7,20 +7,20 @@
 </head>
 
 <body>
-  <ol id="todo-list"></ol>
+<ol id="todo-list"></ol>
 
-  <script>
-    var tasks = ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat'];
+<script>
+  var tasks = ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat'];
 
 
-    var todoList = document.getElementById('todo-list');
-    for (var i = 0; i < tasks.length; i++) {
-      var listItem = document.createElement('li');
-      listItem.className = 'task';
-      listItem.innerHTML = tasks[i];
-      todoList.insertBefore(listItem, todoList.children[0]);
-    }
-  </script>
+  var todoList = document.getElementById('todo-list');
+  for (var i = 0; i < tasks.length; i++) {
+    var listItem = document.createElement('li');
+    listItem.className = 'task';
+    listItem.innerHTML = tasks[i];
+    todoList.insertBefore(listItem, todoList.children[0]);
+  }
+</script>
 
 </body>
 

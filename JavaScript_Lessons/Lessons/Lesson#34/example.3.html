@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- <script src="jquery-3.2.1.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div id="sample-div">Sample</div>
+
+<div class="element">Element</div>
+<div class="element">Element</div>
+<div class="element">Element</div>
+
+<script>
+    var sample = $('#sample-div');
+    sample.html('Change sample text');
+
+    var elements = $('.element');
+    for (var i = 0; i < elements.length; i++) {
+        var element = $(elements[i]);
+        element.html(element.html() + (i + 1));
+    }
+</script>
+
+
+</body>
+
+</html>
