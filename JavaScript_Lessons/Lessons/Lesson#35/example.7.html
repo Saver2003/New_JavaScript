@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+
+<a href="http://google.com" id="google_link">Google</a>
+
+<script>
+  $('#google_link').on('click', function (event) {
+    alert('You clicked the link');
+    event.preventDefault();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>example.3</title>
+  <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<div id="cart-items">
+  <div class="item">Milk 1 l.<span class="qty">x 2</span></div>
+  <div class="item">Cola 1.5 l. <span class="qty">x 1</span></div>
+  <div class="item">Bread<span class="qty">x 2</span></div>
+  <div class="item">Cheese<span class="qty">x 1</span></div>
+  <div class="item">Chocolate bar<span class="qty">x 3</span></div>
+</div>
+
+<script>
+  var list = $('#cart-items');
+  var elements = $('.item');
+  $(elements[1]).remove();
+  $(elements[4]).remove();
+  var newItem = $('<div class="item">Canned Fish <span class="qty">x 4</span></div>');
+  $(list).append(newItem);
+</script>
+
+</body>
+</html>

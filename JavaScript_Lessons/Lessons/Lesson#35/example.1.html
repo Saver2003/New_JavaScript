@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+
+<ul id="todo"></ul>
+
+<script>
+  var createItem = function (itemText, callback) {
+    var item = $('<li>').html(itemText);
+    callback(item);
+  };
+
+  createItem('Buy bread', function (task) {
+    $('#todo').append(task);
+  });
+</script>
+
+</body>
+</html>

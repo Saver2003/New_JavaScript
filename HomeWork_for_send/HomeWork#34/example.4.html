@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>example.4</title>
+  <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<ul id="task-list"></ul>
+
+<script>
+  var taskList = $('#task-list');
+  while (true) {
+    var taskElement = prompt('Введите задачу:');
+    if (taskElement === null || taskElement === '') {
+      break;
+    }
+    var element = $('<li>');
+    element.html(taskElement);
+    taskList.append(element);
+  }
+</script>
+</body>
+</html>
