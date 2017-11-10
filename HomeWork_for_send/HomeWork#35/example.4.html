@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>example.4</title>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+    $(function () {
+      var userNameText;
+      var passwordText;
+      $('input[name="username"]').on('keyup', function (event) {
+        userNameText = event.target.value;
+
+        if (userNameText.length > 6 && passwordText.length > 6) {
+          $('input[type="submit"]').attr('disabled', false);
+        }
+      });
+
+      $('input[name="password"]').on('keyup', function (event) {
+        passwordText = event.target.value;
+
+        if (passwordText.length > 6 && userNameText.length > 6) {
+          $('input[type="submit"]').attr('disabled', false);
+        }
+      });
+
+      $('input[type="submit"]').on('click', function (event) {
+        event.preventDefault();
+        alert('Username: ' + userNameText + '\n' + 'password:' + passwordText)
+      })
+
+    })
+  </script>
+</head>
+<body>
+<form id="login-form">
+  Login: <input type="text" name="username">
+  Password: <input type="password" name="password">
+  <input type="submit" value="Login" disabled>
+</form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+    $(function () {
+      var minutes = $('#minutes');
+      var seconds = $('#seconds');
+      var start = $('#start');
+      var pause = $('#pause');
+      var reset = $('#reset');
+      var interval;
+      var secondsCounter = 1;
+      var minuteCounter = 0;
+
+      start.on('click', function () {
+        if (!interval) {
+          interval = setInterval(function () {
+            if (secondsCounter === 60) {
+              secondsCounter = 0;
+              minuteCounter++;
+              seconds.text(secondsCounter);
+            }
+            if (secondsCounter < 10) {
+              seconds.text('0' + secondsCounter)
+            } else {
+              seconds.text(secondsCounter)
+            }
+            secondsCounter++;
+            if (minuteCounter < 10) {
+              minutes.text('0' + minuteCounter);
+            } else {
+              minutes.text(minuteCounter);
+            }
+          },1000);
+        }
+      });
+
+      pause.on('click', function () {
+        clearInterval(interval);
+        interval = undefined;
+      });
+
+      reset.on('click', function () {
+        clearInterval(interval);
+        secondsCounter = 0;
+        minuteCounter = 0;
+        seconds.text('0' + secondsCounter);
+        minutes.text('0' + minuteCounter);
+      })
+    });
+  </script>
+</head>
+<body>
+<div class="container">
+  <span id="minutes">00</span>
+  <p>:</p>
+  <span id="seconds">00</span>
+</div>
+<div class="btn">
+<button id="start">Start</button>
+<button id="pause">Pause</button>
+<button id="reset">Reset</button>
+</div>
+
+</body>
+</html>

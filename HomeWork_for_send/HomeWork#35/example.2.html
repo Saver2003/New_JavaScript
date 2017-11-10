@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>example.2</title>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+    $(function () {
+      var container = $('#container');
+      var start = $('#start');
+      var stop = $('#stop');
+      var interval;
+
+      var printNumber = function() {
+        if (!interval) {
+          interval = setInterval(function () {
+            var randomNum = Math.floor(Math.random() * 20 + 1);
+            var element = $('<div class="element"></div>');
+            element.html(randomNum);
+            container.append(element);
+          }, 5000);
+        }
+      };
+      printNumber();
+      start.on('click', function () {
+        printNumber();
+      });
+
+      stop.on('click', function () {
+        clearInterval(interval);
+        interval = undefined;
+      });
+    });
+  </script>
+</head>
+<body>
+
+<a href="#" id="start">Start</a> |
+<a href="#" id="stop">Stop</a>
+<div id="container"></div>
+
+</body>
+</html>
