@@ -6,37 +6,42 @@
   <script src="js/jquery-3.2.1.js"></script>
   <script>
     $(function () {
-      var showAnswerLamp = $('#showAnswerLamp');
-      var showAnswerRobin = $('#showAnswerRobin');
-      var showAnswerEye = $('#showAnswerEye');
+//      var showAnswerLamp = $('#showAnswerLamp');
+//      var showAnswerRobin = $('#showAnswerRobin');
+//      var showAnswerEye = $('#showAnswerEye');
       $(document).ready(function () {
-        showAnswerLamp.click(function () {
-          $('.lamp').toggle(500);
-          showAnswerLamp.toggleClass('active');
-          if (showAnswerLamp.hasClass('active')) {
-            showAnswerLamp.val('Скрыть ответ');
-          } else {
-            showAnswerLamp.val('Посмотреть ответ');
-          }
+        $('input[type="button"]').click(function () {
+          var currentElement = $(this);
+          var parent = currentElement.parent();
+          var answer = parent.find('span');
+          answer.toggle();
+
+//          $('.lamp').toggle(500);
+//          showAnswerLamp.toggleClass('active');
+//          if (showAnswerLamp.hasClass('active')) {
+//            showAnswerLamp.val('Скрыть ответ');
+//          } else {
+//            showAnswerLamp.val('Посмотреть ответ');
+//          }
         });
-        showAnswerRobin.click(function () {
-          $('.robin').toggle(500);
-          showAnswerRobin.toggleClass('active');
-          if (showAnswerRobin.hasClass('active')) {
-            showAnswerRobin.val('Скрыть ответ');
-          } else {
-            showAnswerRobin.val('Посмотреть ответ');
-          }
-        });
-        showAnswerEye.click(function () {
-          $('.eye').toggle(300);
-          showAnswerEye.toggleClass('active');
-          if (showAnswerEye.hasClass('active')) {
-            showAnswerEye.val('Скрыть ответ');
-          } else {
-            showAnswerEye.val('Посмотреть ответ');
-          }
-        })
+//        showAnswerRobin.click(function () {
+//          $('.robin').toggle(500);
+//          showAnswerRobin.toggleClass('active');
+//          if (showAnswerRobin.hasClass('active')) {
+//            showAnswerRobin.val('Скрыть ответ');
+//          } else {
+//            showAnswerRobin.val('Посмотреть ответ');
+//          }
+//        });
+//        showAnswerEye.click(function () {
+//          $('.eye').toggle(300);
+//          showAnswerEye.toggleClass('active');
+//          if (showAnswerEye.hasClass('active')) {
+//            showAnswerEye.val('Скрыть ответ');
+//          } else {
+//            showAnswerEye.val('Посмотреть ответ');
+//          }
+//        })
       })
     })
   </script>
@@ -51,13 +56,13 @@
 
 <p class="question">
   С луком с яйцами, но не пирожок?
-  <span class="robin" style="display: none">Робин Гуд</span>
+  <span class="lamp" style="display: none">Робин Гуд</span>
   <input id="showAnswerRobin" type="button" value="Посмотреть ответ">
 </p>
 
 <p class="question">
   Один глаз, один рог, но не носорог?
-  <span class="eye" style="display: none">Корова из-за угла выглядывает</span>
+  <span class="lamp" style="display: none">Корова из-за угла выглядывает</span>
   <input id="showAnswerEye" type="button" value="Посмотреть ответ">
 </p>
 

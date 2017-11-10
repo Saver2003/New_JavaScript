@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+
+  <script>
+    $(function () {
+      var init = function () {
+        var bgcolor = localStorage.getItem('bgcolor');
+        if (bgcolor) {
+          setBodyBgColor(bgcolor);
+          $('input[name="color"]').val(bgcolor);
+        }
+      };
+
+      var setBodyBgColor = function (bgcolor) {
+        $('body').css('background-color', bgcolor);
+      };
+
+      $('input[name="color"]').on('change', function () {
+        var bgcolor = $(this).val();
+        setBodyBgColor(bgcolor);
+        localStorage.setItem('bgcolor', bgcolor);
+      });
+
+      init();
+    });
+
+  </script>
+</head>
+<body>
+<label>select a color: <input type="text" name="color"/></label>
+</body>
+</html>

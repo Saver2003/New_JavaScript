@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+
+  <script>
+    $(function () {
+      $('.show-comments').on('click', function (event) {
+        console.log(this.tagName);
+      });
+    })
+
+  </script>
+
+</head>
+<body>
+<a class="show-comments" href="#"><span>Show comments for post 1</span></a><br>
+<a class="show-comments" href="#">Show comments for post 2</a><br>
+<a class="show-comments" href="#">Show comments for post 3</a><br>
+<a class="show-comments" href="#">Show comments for post 4</a><br>
+
+
+</body>
+</html>
