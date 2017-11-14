@@ -1,19 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+            $('#add-item-btn').on('click', function () {
+                var element = $('<div class="element">Element</div>');
+                $('#container').append(element);
+            });
+        });
+    </script>
 
-  <title>Document.1</title>
 </head>
-
 <body>
-  <script>
-    var Lift = {
+<div id="container"></div>
+<input id="add-item-btn" type="button" value="+">
 
-    }
-  </script>
 
 </body>
-
 </html>

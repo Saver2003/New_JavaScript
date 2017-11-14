@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.2.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <!--<script src="js/jquery-ui.js"></script>-->
+
+    <script>
+        $(function () {
+            $('#textArea').on('keydown', function (e) {
+                if (e.ctrlKey && e.keyCode === 83) {
+                    localStorage.setItem('text', $('#textArea').val());
+                    e.preventDefault();
+                }
+            });
+
+            $('#save').on('click', function () {
+                localStorage.setItem('text', $('#textArea').val());
+            });
+
+            $('#clear').on('click', function () {
+                localStorage.removeItem('text', $('#textArea').val());
+                $('#textArea').val('');
+            });
+
+            var init = function () {
+                var textReturn = localStorage.getItem('text');
+                if (textReturn) {
+                    $('#textArea').val(textReturn);
+                }
+            };
+            init();
+        })
+    </script>
+</head>
+<body style="background: #CDD0CB">
+<textarea name="" id="textArea" cols="100" rows="12" style="background: #fff; padding: 8px"></textarea>
+<input type="button" id="save" value="Сохранить">
+<input type="button" id="clear" value="Очистить" >
+<span style="display: block; margin-top: 15px;">Чтобы сохранить текст нажмите ctrl+S</span>
+</body>
+</html>
