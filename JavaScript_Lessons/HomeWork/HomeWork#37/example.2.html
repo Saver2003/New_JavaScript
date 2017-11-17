@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <style>
+        body {
+            background: #ccc;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        table {
+            margin: 50px 0;
+            background: #DCDCDC;
+
+        }
+        table th {
+            background: #ccc;
+        }
+
+        table img {
+            width: auto;
+            height: 50px;
+        }
+
+        table td {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        table, td, th, tr {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <table>
+        <thead>
+        <th>Code</th>
+        <th>Flag</th>
+        <th>Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        </thead>
+    </table>
+</div>
+<script>
+    $.ajax({
+        method: 'GET',
+        url: "https://restcountries.eu/rest/v2/all",
+        success: function (response) {
+            var massiv = ['alpha2Code', 'flag', 'name', 'capital', 'population'];
+            for (var i = 0; i < response.length; i++) {
+                var newTr = $('<tr>');
+                $('table').append(newTr);
+                for (var j = 0; j < 5; j++) {
+                    var newTd = $('<td>');
+                    var key = massiv[j];
+                    newTr.append(newTd);
+                    newTd.append(response[i][key]);
+                    if (j === 1) {
+                        var newImg = $('<img>').attr('src', response[i].flag);
+                        newTd.html(newImg);
+
+                    }
+                }
+            }
+
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+
+    </script>
+    <style>
+        body {
+            background: #ccc;
+        }
+        #flag img {
+            width: auto;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<input id="country-name" type="text">
+<button id="show">Show information</button>
+
+<p><b>Name: </b><span id="name"></span></p>
+<p><b>Region: </b><span id="region"></span></p>
+<p><b>Subregion: </b><span id="subregion"></span></p>
+<p><b>Capital: </b><span id="capital"></span></p>
+<p><b>Flag: </b><span id="flag"></span></p>
+
+<script>
+    function addData(response) {
+        $('#name').html(response[0].name);
+        $('#region').html(response[0].region);
+        $('#subregion').html(response[0].subregion);
+        $('#capital').html(response[0].capital);
+        $('#flag').append($('<img>').attr('src', response[0].flag));
+    }
+
+
+    function getInformation(name) {
+        $.ajax({
+            method: 'GET',
+            url: "https://restcountries.eu/rest/v2/name/" + name,
+            success: addData,
+            error: function (message) {
+                alert(message.responseJSON.message)
+            }
+        });
+    }
+//        alert(this.statusText);
+
+    $('#show').on('click', function () {
+        getInformation($('#country-name').val())
+    });
+
+
+
+
+</script>
+</body>
+</html>
