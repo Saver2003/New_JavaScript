@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.1.css">
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+
+<img src="833.svg" alt="" id="preloader">
+
+<div class="sidebar"></div>
+<div class="container">
+    <div class="main"></div>
+</div>
+
+<script>
+
+    var preloader = $('#preloader');
+    $(document).ajaxStart(function () {
+        $(preloader).show();
+    });
+    $(document).ajaxStop(function () {
+        $(preloader).hide();
+    });
+    var newBlock = 0;
+
+    $.ajax({
+        method: 'GET',
+        url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=fx30GSNSeUTWFnBWwIGACy4qHYdyB16EQPVObYDr",
+        success: function (response) {
+
+            var newH3 = $('<h2 class="title">');
+            console.log(response.photos[0]);
+            $('.sidebar').prepend(newH3);
+            $(newH3).html(response.photos[0].rover.name);
+
+            for (var i = 0; i < 10; i++) {
+                newBlock = i;
+                var newDiv = $('<div class="photoId">Id:</div>');
+                $('.sidebar').append(newDiv);
+                $(newDiv).html('Photo ' + (i + 1)).attr('id', response.photos[i]['id']);
+            }
+            $('.photoId').on('click', function () {
+                var self = this;
+
+                $.ajax({
+                    method: 'GET',
+                    url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=fx30GSNSeUTWFnBWwIGACy4qHYdyB16EQPVObYDr",
+
+                    success: function (response) {
+                        var newSpan = $('<span id="photo" />');
+                        console.log(self);
+                        newBlock += 10;
+                        for (var i = 0; i < newBlock; i++) {
+                            console.log($(self).attr('id'));
+
+                            if (parseInt($(self).attr('id')) === response.photos[i]['id']) {
+                                $('.main').html(newSpan);
+                                $(newSpan).html($('<img>').attr('src', response.photos[i].img_src));
+                            }
+                        }
+                    }
+                });
+            })
+        }
+    });
+</script>
+
+</body>
+</html>

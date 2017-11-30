@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="css/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/easy-autocomplete.themes.min.css">
+    <link rel="stylesheet" href="css/style.1.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/example.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.easy-autocomplete.js"></script>
+
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $.getJSON('https://restcountries.eu/rest/v2/all?fields=name', function (countries) {
+                var options = {
+                    data: countries,
+                    getValue: "name",
+                    theme: "square",
+                    list: {match: {enabled: true}}
+                };
+
+                $("#country").easyAutocomplete(options);
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+<div class="container">
+    <div id="posts"></div>
+    <form>
+        <div class="block">
+            <div class="send-block">
+                <p class="datepicker">Date: <input type="text" id="postDate"></p>
+                <textarea name="" id="postText" class="textarea" cols="60" rows="5"></textarea>
+                <button class="btn" id="save">Save</button>
+                <label>Country:
+                    <input type="text" id="postCountry" class="search-country">
+                </label>
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        var options = {
+            url: 'https://restcountries.eu/rest/v2/all?fields=name;flag',
+            getValue: "name",
+            theme: "square",
+            template: {
+                type: "iconLeft",
+                fields: {
+                    iconSrc: 'flag'
+                }
+            },
+            list: {match: {enabled: true}}
+        };
+        $('#postCountry').easyAutocomplete(options);
+        $('#postDate').datepicker();
+
+        var posts = [];
+
+        function readFromLocalStorage() {
+            var oldPostFromLocalStorageInString = localStorage.getItem('posts');
+            var oldPost = JSON.parse(oldPostFromLocalStorageInString) || [];
+            for (var i = 0; i < oldPost.length; i++) {
+                addNewPostToHtml(oldPost[i], i + 1);
+            }
+        }
+
+        readFromLocalStorage();
+
+        function getNewPostData() {
+            return {
+                country: $('#postCountry').val(),
+                date: $('#postDate').val(),
+                text: $('#postText').val()
+            }
+        }
+
+        function addNewPostToHtml(newPostData, index) {
+            var postElement = $('<div class="post">');
+            var postHeader = $('<div class="post-header">');
+            var postDate = $('<span class="post-date">').text(' at ' + newPostData.date);
+            var postCountry = $('<span class="post-country">').text(' being in ' + newPostData.country);
+            var postId = $('<span class="postID">').text('Post # ' + index);
+            var postText = $('<p class="post-text">').text(newPostData.text);
+            var deletePost = $('<button data-id="' + (index - 1) + '" class="delete-post">Delete</button>');
+            postHeader.append(postId, postDate, postCountry, deletePost, postText);
+            postElement.append(postHeader);
+            $('#posts').append(postElement);
+//            $('.block').append(postHeader);
+        }
+
+        function saveNewPostToLoalStorag(newPostData) {
+            posts = JSON.parse(localStorage.getItem('posts')) || [];
+            posts.push(newPostData);
+            var newPostInString = JSON.stringify(posts);
+            localStorage.setItem('posts', newPostInString);
+        }
+
+        function addNewPost() {
+            var newPostData = getNewPostData();
+            addNewPostToHtml(newPostData, $('.post').length + 1);
+            saveNewPostToLoalStorag(newPostData);
+        }
+
+        $('#save').on('click', function (e) {
+            addNewPost();
+            e.preventDefault();
+        });
+
+
+
+        $('#posts').on('click', '.delete-post', function (e) {
+            e.preventDefault();
+            var deletePost = JSON.parse(localStorage.getItem('posts'));
+            var attrFromButtonId = $('.post-header').index($(this).parent());
+            deletePost.splice(attrFromButtonId, 1);
+            deletePost = JSON.stringify(deletePost);
+            localStorage.setItem('posts', deletePost);
+            $('#posts').empty();
+            readFromLocalStorage();
+        });
+    })
+</script>
+
+</body>
+</html>
