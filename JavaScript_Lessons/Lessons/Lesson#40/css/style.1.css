@@ -1,0 +1,97 @@
+body {
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    background: #fff;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.block {
+    /*margin-top: 30px;*/
+    width: 800px;
+    height: 600px;
+    /*border: 1px solid #ccc;*/
+
+}
+
+.send-block {
+    position: fixed;
+    bottom: 0;
+    left: 835px;
+    background: #fff;
+}
+
+.textarea {
+    position: absolute;
+    bottom: 15px;
+    right: 120px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.btn {
+    position: absolute;
+    bottom: 81px;
+    right: 50px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 5px;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.5);
+}
+
+.datepicker {
+    position: absolute;
+    bottom: 93px;
+    left: 30px;
+}
+
+label {
+    position: absolute;
+    bottom: 63px;
+    left: 30px;
+    width: 100px;
+    height: 20px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.easy-autocomplete.eac-square input {
+    min-width: 60px;
+    /*display: inline-block;*/
+    padding: 2px 0;
+}
+
+.post {
+    position: relative;
+}
+.post-header {
+    margin: 10px 10px;
+    /*position: absolute;*/
+    /*top: 10px;*/
+    /*left: 10px;*/
+}
+
+.post-text {
+    padding: 0 10px 5px;
+}
+
+.delete-post {
+    float: right;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.delete-post:hover {
+    box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.5);
+}

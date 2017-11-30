@@ -29,7 +29,8 @@
                 var textReturn = localStorage.getItem('text');
                 if (textReturn) {
                     $('#textArea').val(textReturn);
-                }                       alert(message.responseJSON.message);
+                }
+                alert(message.responseJSON.message);
             };
             init();
         })
@@ -38,7 +39,7 @@
 <body style="background: #CDD0CB">
 <textarea name="" id="textArea" cols="100" rows="12" style="background: #fff; padding: 8px"></textarea>
 <input type="button" id="save" value="Сохранить">
-<input type="button" id="clear" value="Очистить" >
+<input type="button" id="clear" value="Очистить">
 <span style="display: block; margin-top: 15px;">Чтобы сохранить текст нажмите ctrl+S</span>
 </body>
 </html>

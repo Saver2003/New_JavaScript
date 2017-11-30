@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/money.js"></script>
+</head>
+<body>
+<div class="sidebar">
+    <h2>Курс валют:</h2>
+    <p>Валюта по умолчанию</p>
+
+
+
+</div>
+
+<script>
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.fixer.io/latest?base=usd',
+        success: function (response) {
+            console.log(response);
+            var eur = $('<p id="eur">');
+            var gbp = $('<p id="gbp">');
+            $('.sidebar').html(response.base);
+//            $(gbp).html(response.rates.GBP);
+            $('.sidebar').append(eur);
+            $('.sidebar').append(gbp);
+//            $('.sidebar').append('USD ' + response.rates.USD + '\n');
+            $(gbp).append('GBP ' + response.rates.GBP);
+            $(eur).append('EUR ' + response.rates.EUR);
+
+
+
+
+
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    position: relative;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#photo img {
+
+    width: 800px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    float: left;
+    background: #ccc;
+    width: 200px;
+    display: block;
+}
+
+.main {
+    float: right;
+}
+
+#preloader {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+}
+
+h2 {
+    padding-left: 10px;
+}
+
+.photoId {
+    padding: 5px 0 5px 10px;
+}
+
+
+

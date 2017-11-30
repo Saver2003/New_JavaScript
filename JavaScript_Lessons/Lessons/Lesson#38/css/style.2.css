@@ -1,0 +1,40 @@
+.container {
+    width: 560px;
+    height: 150px;
+    background: #ccc;
+    margin-top: 100px;
+    position: relative;
+}
+
+.tab {
+    position: relative;
+    width: 600px;
+}
+
+.btn {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px 5px 0 0;
+    background: #ccc;
+}
+
+.title {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+.title1 {
+    display: block;
+}
+
+.info {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+
+.info1 {
+    display: block;
+}

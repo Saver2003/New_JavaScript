@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.1.css">
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<img src="150.gif" alt="" id="preloader">
+<div class="sidebar">
+
+<p><b>Rover: </b><span id="rover"></span></p>
+<p><b>Date: </b><a href="#"><span id="date"></span></a></p>
+</div>
+<p><b></b><span id="photo"></span></p>
+<script>
+    //    function getInformation(response) {
+    //        console.log(response);
+    //    }
+
+    function addData(response) {
+        $('#photo').append($('<img>').attr('src', response.photos[0].img_src));
+        for (var i = 0; i < 10; i++) {
+
+        $('#date').html(response.photos[i].earth_date);
+        }
+        $('#rover').html(response.photos[i].rover.name);
+
+
+    }
+    var preloader = $('#preloader');
+    $(document).ajaxStart(function() {
+        $('#preloader').show();
+    });
+    $(document).ajaxStop(function() {
+        $('#preloader').hide();
+    });
+
+
+
+    $.ajax({
+        method: 'GET',
+        url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=fx30GSNSeUTWFnBWwIGACy4qHYdyB16EQPVObYDr",
+        success: addData
+
+
+
+    });
+
+
+</script>
+
+</body>
+</html>

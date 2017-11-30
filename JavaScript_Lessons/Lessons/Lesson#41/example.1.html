@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function CoffeeMachine(power) {
+        this.waterAmount = 0;
+        this.power = power;
+
+    }
+
+    var coffeeMashine = new CoffeeMachine(100);
+    coffeeMashine.waterAmount = 200;
+    console.log(coffeeMashine);
+
+    var powerFullCoffeeMashine = new CoffeeMachine(1000);
+    powerFullCoffeeMashine.waterAmount = 300;
+    console.log(powerFullCoffeeMashine);
+
+    function CoffeeMachine(power) {
+        this.waterAmount = 0;
+
+
+        function getBoilTime() {
+            return 5000;
+        }
+
+        function onReady() {
+            alert('Кофе готов!');
+        }
+
+        this.run = function () {
+            setTimeout(onReady, getBoilTime());
+
+        }
+    }
+
+    var coffeeMashine = new CoffeeMachine(100);
+    coffeeMashine.waterAmount = 200;
+
+    coffeeMashine.run();
+
+</script>
+
+</body>
+</html>

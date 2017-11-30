@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<div class="container">
+    <form id="addPost" class="addpost">
+        <label>Create new To Do:
+            <input id="postCountry" class="task todo-text" type="text">
+        </label>
+        <button id="add" class="add">Add</button>
+    </form>
+    <div class="info">
+        <div class="block block-1">
+            <h3>To Do</h3>
+            <div id="todo" class="todo fram">
+            </div>
+        </div>
+        <div class="block block-2">
+            <button id="btn1" class="btn1">In Progress</button>
+            <div id="inprogress" class="inprogress fram">
+            </div>
+        </div>
+        <div class="block block-3">
+            <button id="btn2" class="btn2">Done</button>
+            <div id="done" class="done fram">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var synced_content = localStorage.getItem("content");
+        if (synced_content) {
+            $('.info').html(synced_content);
+        }
+    });
+
+    function addNewTodo(todo_text) {
+        if (!todo_text) {
+            return;
+        }
+        $('.todo.fram').append(addNewBlock(todo_text, 'in-progress', 'In progress'));
+    }
+
+    function addNewBlock(todo_text, button_class, button_text) {
+        return "<div class='wrapper'>" +
+            "<div><span class='text'>" + todo_text + "<span><button class='destroy'>x</button></div>" +
+            "<div><button class='" + button_class + "' data-text='" + todo_text + "'>" + button_text + "</button></div>" +
+            "</div>";
+    }
+
+    function saveStorage(todo_text) {
+        if ($('.wrapper').length) {
+            var newPostInString = JSON.stringify(content);
+            localStorage.setItem("content", $('newPostInString').html());
+        } else {
+            localStorage.setItem("content", '');
+        }
+    }
+
+    $('#add').on('click', function (e) {
+        e.preventDefault();
+        var todo_text = $('.todo-text').val();
+        $('.todo-text').val('');
+        if (!todo_text) {
+            return;
+        }
+        $('.todo.fram').append(addNewBlock(todo_text, 'in-progress', 'In progress >'));
+        saveStorage();
+    });
+
+    $('.container').on('click', '.in-progress', function (e) {
+        $('.inprogress.fram').append(addNewBlock($(this).data('text'), 'done', 'Done >'));
+        $(this).closest('.wrapper').remove();
+        saveStorage();
+    })
+
+    $('.container').on('click', 'button.done', function (e) {
+        $('.done.fram').append(addNewBlock($(this).data('text'), 'destroy', 'Delete'));
+        $(this).closest('.wrapper').remove();
+        saveStorage();
+    })
+
+    $('.container').on('click', '.destroy', function (e) {
+        e.preventDefault();
+        $(this).closest('.wrapper').remove();
+        saveStorage();
+    })
+</script>
+</body>
+</html>
