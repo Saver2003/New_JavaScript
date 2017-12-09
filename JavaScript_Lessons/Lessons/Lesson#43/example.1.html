@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var Observer = function () {
+            this.listener = {};
+        };
+        
+        Observer.prototype.on = function (type, listener) {
+            // type = 'click';
+            // listener = function () {};
+            
+            if (!(type in this.listener)) {
+                this.listener[type] = [];
+            }
+            
+            
+            this.listener[type] = [].push(listener);
+            
+        };
+
+        Observer.prototype.off = function (type, listener) {
+            if(type in this.listener) {
+                for (var i = 0; i  < typeListeners.length; i++) {
+                    if(typeListeners[i] === listener) {
+                        typeListeners.splice(i, 1);
+                    }
+                }
+            }
+        };
+
+        Observer.prototype.trigger = function(type) {
+            if (type in this.listener) {
+                var typeListeners = this.listener[type];
+                for (var i = 0; i < typeListeners.length; i++) {
+                    var listener = typeListeners[i];
+                    listener();
+                }
+            }
+        };
+        
+
+
+        var o = new Observer();
+        // o.listener === {};
+        
+        var callback = function () {
+            console.log('Click event')
+        };
+        var anothercallback = function () {
+            console.log('This is another callback')
+        };
+        
+        o.on('click', callback);
+        o.on('click', anothercallback);
+        o.trigger('click', {});
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <script>
+        var guestArrived = function(arguments) {
+            console.log('Guest ' + arguments.name + ' has arrived!');
+        };
+    
+        var guestDeparted = function(arguments) {
+            console.log('Guest ' + arguments.name + ' has departed!');
+        };
+    
+        var observer = new Observer();
+        observer.on('guest_arrived', guestArrived);
+        observer.on('guest_departed', guestDeparted);
+        
+        observer.trigger('guest_arrived', {name: 'Vasya'});
+        observer.trigger('guest_arrived', {name: 'Petya'});
+        observer.trigger('guest_departed', {name: 'Petya'});
+        
+        observer.off('guest_departed', guestDeparted);
+        observer.trigger('guest_departed', {name: 'Vasya'});
+    
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

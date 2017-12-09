@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+            
+            var PiggyBank = function () {
+                this.coins = {1: 0, 3: 0, 5: 0, 10: 0};
+                
+                this.addCoin = function (value) {
+                    switch (value) {
+                        case 1:
+                        case 3:
+                        case 5:
+                        case 10:
+                            this.coins[value]++;
+                            break;
+                        default:
+                            console.log('This is not a correct value!');
+                    }
+                };
+            };
+            
+            PiggyBank.prototype.showCoins = function () {
+                for (var value in this.coins) {
+                    $('.info-block').html(value + ': ' + this.coins[value] + '<br>');
+                }
+            };
+            
+            PiggyBank.prototype.getTotal = function () {
+                var total = 0;
+                for (var value in this.coins) {
+                    total += value * this.coins[value];
+                }
+                $('#total').html(total);
+            };
+            
+            var newPiggyBank = new PiggyBank();
+            
+            $('#btnOneCoin').on('click', function () {
+                newPiggyBank.getTotal();
+                $('.info-block').empty();
+                newPiggyBank.addCoin(1);
+                newPiggyBank.showCoins();
+                // $('.info-block').append(addCoinOne);
+            });
+            
+            $('#btnThreeCoin').on('click', function () {
+                newPiggyBank.getTotal();
+                $('.info-block').empty();
+                newPiggyBank.addCoin(3);
+                newPiggyBank.showCoins();
+                // $('.info-block').append(addCoinOne);
+            });
+            
+            $('#btnFiveCoin').on('click', function () {
+                newPiggyBank.getTotal();
+                $('.info-block').empty();
+                newPiggyBank.addCoin(5);
+                newPiggyBank.showCoins();
+                // $('.info-block').append(addCoinOne);
+            });
+            
+            $('#btnTenCoin').on('click', function () {
+                newPiggyBank.getTotal();
+                $('.info-block').empty();
+                newPiggyBank.addCoin(10);
+                newPiggyBank.showCoins();
+                // $('.info-block').append(addCoinOne);
+            });
+            
+            
+        });
+        
+        // newPiggyBank.addCoin(10);
+        // newPiggyBank.addCoin(5);
+        // newPiggyBank.addCoin(3);
+        // newPiggyBank.addCoin(1);
+        // newPiggyBank.showCoins();
+        // console.log(newPiggyBank.getTotal());
+    
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <p id="total">Total: </p>
+    <div class="info-block">
+        <p id="coinOne">1: </p>
+        <p id="coinThree">3: </p>
+        <p id="coinFive">5: </p>
+        <p id="coinTen">10: </p>
+    </div>
+    <p>Add some coins: </p>
+    <button id="btnOneCoin">1</button>
+    <button id="btnThreeCoin">3</button>
+    <button id="btnFiveCoin">5</button>
+    <button id="btnTenCoin">10</button>
+
+</div>
+
+</body>
+</html>

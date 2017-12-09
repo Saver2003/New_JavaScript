@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var request = function (url) {
+            var xhr = new XMLHttpRequest();
+            xhr.timeout = 2000;
+            xhr.onreadystatechange = function (e) {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        // Код обработки успешного завершения запроса
+                    } else {
+                        // Обрабатываем ответ с сообщением об ошибке
+                    }
+                }
+            };
+            xhr.ontimeout = function () {
+                // Ожидание ответа заняло слишком много времени
+            };
+            xhr.open('GET', url, true);
+            xhr.send();
+        }
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

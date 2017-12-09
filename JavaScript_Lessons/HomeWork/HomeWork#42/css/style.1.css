@@ -1,0 +1,17 @@
+.gllpLatlonPicker {
+    width: 400px;
+}
+block {
+    position: relative;
+}
+
+#preloader {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.gllpLatlonPicker {
+    display: none;
+}

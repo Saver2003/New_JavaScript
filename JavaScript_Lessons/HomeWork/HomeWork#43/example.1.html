@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <script>
+        
+        var Hamburger = function (size, topping) {
+            
+            sizes = {
+                'small': {
+                    'price': 60,
+                    'calories': 200
+                },
+                'big': {
+                    'price': 80,
+                    'calories': 300
+                }
+            };
+            
+            toppings = {
+                'cheese': {
+                    'price': 15,
+                    'calories': 50
+                },
+                'salad': {
+                    'price': 5,
+                    'calories': 5
+                },
+                'frenchFries': {
+                    'price': 10,
+                    'calories': 25
+                }
+            };
+    
+            if (!(size in sizes) || !(topping in toppings)) {
+                throw new SyntaxError('Incorrect data');
+            }
+            
+            this.price = 0;
+            this.calories = 0;
+            
+            var getTotal = function (summa) {
+                return sizes[size][summa] + toppings[topping][summa];
+            };
+            
+            this.getPrice = function () {
+                this.price = getTotal('price');
+                return 'Цена гамбургера ' + cheeseburger.price + ' сомов.'
+            };
+            
+            this.getCalories = function () {
+                this.calories = getTotal('calories');
+                return 'Энергетическая ценность гамбургера ' + cheeseburger.calories + ' калорий.'
+            };
+        };
+        
+        var cheeseburger = new Hamburger('small', 'salad');
+        
+        console.log(cheeseburger.getPrice());
+        console.log(cheeseburger.getCalories());
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

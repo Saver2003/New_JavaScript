@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <script>
+        var PiggyBank = function () {
+            this.coins = {1: 0, 3: 0, 5: 0, 10: 0};
+            this.addCoin = function (value) {
+                switch (value) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 10:
+                        this.coins[value]++;
+                        break;
+                    default:
+                        console.log('This is not a correct value!');
+                }
+            };
+            
+            this.showCoins = function () {
+                for (var value in this.coins) {
+                    console.log(value, this.coins[value]);
+                }
+            };
+            
+            this.getTotal = function () {
+                var total = 0;
+                for (var value in this.coins) {
+                    total += value * this.coins[value];
+                }
+                return total;
+            };
+        };
+        
+        var newPiggyBank = new PiggyBank();
+        
+        
+        newPiggyBank.addCoin(10);
+        newPiggyBank.addCoin(5);
+        newPiggyBank.addCoin(3);
+        newPiggyBank.addCoin(1);
+        newPiggyBank.showCoins();
+        console.log(newPiggyBank.getTotal());
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

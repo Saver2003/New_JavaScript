@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCaygFvGtmktXDt3EZsyHCmN6_4jjZ6Xs0&sensor=false"></script>
+    <link rel="stylesheet" href="css/jquery-gmaps-latlon-picker.css">
+    <link rel="stylesheet" href="css/style.1.css">
+    <script>
+        $.gMapsLatLonPickerNoAutoInit = 1;
+    </script>
+    <script src="js/jquery-gmaps-latlon-picker.js"></script>
+    <style>
+        body {
+            background: #ccc;
+        }
+        
+        #flag img {
+            width: auto;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<img src="img/35.svg" alt="" id="preloader">
+
+<input id="country-name" type="text">
+<button id="show">Show information</button>
+
+<div id="countryBlock"></div>
+
+<fieldset class="gllpLatlonPicker">
+    <div class="gllpMap">Google Maps</div>
+    <input type="hidden" class="gllpLatitude" value=""/>
+    <input type="hidden" class="gllpLongitude" value=""/>
+    <input type="hidden" class="gllpZoom" value="3"/>
+</fieldset>
+
+<script>
+    var preloader = $('#preloader');
+    $(document).ajaxStart(function () {
+        $(preloader).show();
+    });
+    $(document).ajaxStop(function () {
+        $(preloader).hide();
+    });
+</script>
+
+
+<script src="js/example.1.js"></script>
+</body>
+</html>

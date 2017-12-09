@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var request = function (url, successCallback, errorCallback) {
+            var xhr = new XMLHttpRequest();
+            xhr.timeout = 2000;
+            xhr.onreadystatechange = function (e) {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        successCallback(xhr.response);
+                    } else {
+                        errorCallback(xhr.status);
+                    }
+                }
+            };
+            xhr.ontimeout = function () {
+                errorCallback('Timeout');
+            };
+            xhr.open('GET', url, true);
+            xhr.send();
+        };
+        var getUsersUrl
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>
