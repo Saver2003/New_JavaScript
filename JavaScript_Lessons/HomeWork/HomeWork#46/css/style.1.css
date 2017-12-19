@@ -1,0 +1,32 @@
+body {
+    position: relative;
+    background: rgba(0, 0, 0, 0.64);
+}
+
+.pokemon {
+    position: absolute;
+    top: 60px;
+    left: 35%;
+}
+
+img {
+    display: block;
+}
+
+p {
+    margin: 0;
+    color: #fff;
+}
+a p li {
+    color: #fff;
+}
+
+ol {
+    color: #fff;
+}
+
+#preloader {
+    position: absolute;
+    top: 10px;
+    left: 35%;
+}

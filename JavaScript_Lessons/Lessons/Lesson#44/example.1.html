@@ -22,7 +22,25 @@
             xhr.open('GET', url, true);
             xhr.send();
         };
-        var getUsersUrl
+        var getUsersUrl = 'https://api.github.com/search/users?q=sylvix';
+        
+        var handleError = function (error) {
+            console.error(error);
+        };
+        
+        var handleReposList = function (repos) {
+            console.log(repos);
+        };
+        
+        var handlerUsersList = function (result) {
+            var list = JSON.parse(result).items;
+            
+            list.forEach(function (user) {
+                request(user.repos_url, handleReposList, handleError);
+            })
+        };
+        
+        request(getUsersUrl, handlerUsersList, handleError);
     
     </script>
 </head>

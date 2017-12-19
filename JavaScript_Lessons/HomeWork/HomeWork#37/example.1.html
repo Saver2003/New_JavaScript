@@ -32,6 +32,7 @@
         $('#subregion').html(response[0].subregion);
         $('#capital').html(response[0].capital);
         $('#flag').append($('<img>').attr('src', response[0].flag));
+        console.log(response[0]);
     }
 
     function getInformation(name) {

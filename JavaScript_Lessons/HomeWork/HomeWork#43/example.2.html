@@ -5,6 +5,85 @@
     <title>Title</title>
     <script src="js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="css/style.2.css">
+    <script>
+        $(function () {
+            var PiggyBank = function () {
+                this.coins = {1: 0, 3: 0, 5: 0, 10: 0};
+        
+                this.addCoin = function (value) {
+                    switch (value) {
+                        case 1:
+                        case 3:
+                        case 5:
+                        case 10:
+                            this.coins[value]++;
+                            break;
+                        default:
+                            console.log('This is not a correct value!');
+                    }
+                };
+            };
+    
+            PiggyBank.prototype.showCoins = function () {
+        
+                $('.info-block').empty();
+                for (var value in this.coins) {
+                    var oneCoin = $('<p id="oneCoin">').append(value + ': ' + this.coins[value] + '<br>');
+                    $('.info-block').append(oneCoin);
+                }
+            };
+    
+            PiggyBank.prototype.getTotal = function () {
+                var total = 0;
+                for (var value in this.coins) {
+                    total += value * this.coins[value];
+                }
+                $('#total').html('Total: ' + total);
+            };
+    
+            var Observer = function () {
+                this.listeners = {}
+            };
+    
+            Observer.prototype.on = function (type, listener) {
+                if (!(type in this.listeners)) {
+                    this.listeners[type] = [];
+                }
+                this.listeners[type].push(listener);
+            };
+    
+            Observer.prototype.trigger = function (type, arguments) {
+                if (type in this.listeners) {
+                    for (var i = 0; i < this.listeners[type].length; i++) {
+                        var listener = this.listeners[type][i];
+                        listener(arguments);
+                    }
+                }
+            };
+    
+            var newAddCoins = function (value) {
+                newPiggyBank.addCoin(value);
+                observer.trigger('coinsChange');
+            };
+    
+            var newShowCoins = function () {
+                newPiggyBank.showCoins();
+                newPiggyBank.getTotal();
+            };
+    
+            var observer = new Observer();
+            observer.on('AddCoins', newAddCoins);
+            observer.on('coinsChange', newShowCoins);
+    
+            var newPiggyBank = new PiggyBank();
+    
+            $('.btnAddCoin').on('click', function () {
+                var addCoinOnClick = parseInt($(this).text());
+                observer.trigger('AddCoins', addCoinOnClick);
+        
+            });
+        })
+    </script>
 
 </head>
 <body>
