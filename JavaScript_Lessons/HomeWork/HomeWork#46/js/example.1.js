@@ -37,7 +37,7 @@ $(function () {
             $(pokemonView).append(pokemonWeight);
             $('.pokemon').html(pokemonView);
             
-            // var next = 20;
+            // var next = 40;
             
             // $.ajax({
             //     method: 'GET',
